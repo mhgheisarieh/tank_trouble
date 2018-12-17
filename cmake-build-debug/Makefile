@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named simple_snake.c
+# Target rules for targets named main.c
 
 # Build rule for target.
-simple_snake.c: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simple_snake.c
-.PHONY : simple_snake.c
+main.c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main.c
+.PHONY : main.c
 
 # fast build rule for target.
-simple_snake.c/fast:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/build
-.PHONY : simple_snake.c/fast
+main.c/fast:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
+.PHONY : main.c/fast
+
+src/logic.o: src/logic.c.o
+
+.PHONY : src/logic.o
+
+# target to build an object file
+src/logic.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/logic.c.o
+.PHONY : src/logic.c.o
+
+src/logic.i: src/logic.c.i
+
+.PHONY : src/logic.i
+
+# target to preprocess a source file
+src/logic.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/logic.c.i
+.PHONY : src/logic.c.i
+
+src/logic.s: src/logic.c.s
+
+.PHONY : src/logic.s
+
+# target to generate assembly for a file
+src/logic.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/logic.c.s
+.PHONY : src/logic.c.s
 
 src/main.o: src/main.c.o
 
@@ -129,7 +156,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/src/main.c.o
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -138,7 +165,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/src/main.c.i
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -147,35 +174,62 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/src/main.c.s
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/simple_snake.o: src/simple_snake.c.o
+src/physics.o: src/physics.c.o
 
-.PHONY : src/simple_snake.o
+.PHONY : src/physics.o
 
 # target to build an object file
-src/simple_snake.c.o:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o
-.PHONY : src/simple_snake.c.o
+src/physics.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/physics.c.o
+.PHONY : src/physics.c.o
 
-src/simple_snake.i: src/simple_snake.c.i
+src/physics.i: src/physics.c.i
 
-.PHONY : src/simple_snake.i
+.PHONY : src/physics.i
 
 # target to preprocess a source file
-src/simple_snake.c.i:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/src/simple_snake.c.i
-.PHONY : src/simple_snake.c.i
+src/physics.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/physics.c.i
+.PHONY : src/physics.c.i
 
-src/simple_snake.s: src/simple_snake.c.s
+src/physics.s: src/physics.c.s
 
-.PHONY : src/simple_snake.s
+.PHONY : src/physics.s
 
 # target to generate assembly for a file
-src/simple_snake.c.s:
-	$(MAKE) -f CMakeFiles/simple_snake.c.dir/build.make CMakeFiles/simple_snake.c.dir/src/simple_snake.c.s
-.PHONY : src/simple_snake.c.s
+src/physics.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/physics.c.s
+.PHONY : src/physics.c.s
+
+src/view.o: src/view.c.o
+
+.PHONY : src/view.o
+
+# target to build an object file
+src/view.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/view.c.o
+.PHONY : src/view.c.o
+
+src/view.i: src/view.c.i
+
+.PHONY : src/view.i
+
+# target to preprocess a source file
+src/view.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/view.c.i
+.PHONY : src/view.c.i
+
+src/view.s: src/view.c.s
+
+.PHONY : src/view.s
+
+# target to generate assembly for a file
+src/view.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/view.c.s
+.PHONY : src/view.c.s
 
 # Help Target
 help:
@@ -184,14 +238,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... simple_snake.c"
+	@echo "... main.c"
 	@echo "... edit_cache"
+	@echo "... src/logic.o"
+	@echo "... src/logic.i"
+	@echo "... src/logic.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/simple_snake.o"
-	@echo "... src/simple_snake.i"
-	@echo "... src/simple_snake.s"
+	@echo "... src/physics.o"
+	@echo "... src/physics.i"
+	@echo "... src/physics.s"
+	@echo "... src/view.o"
+	@echo "... src/view.i"
+	@echo "... src/view.s"
 .PHONY : help
 
 

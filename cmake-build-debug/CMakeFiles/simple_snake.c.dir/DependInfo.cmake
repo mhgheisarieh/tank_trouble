@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/simple_snake.c.dir/src/main.c.o"
   "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o"
+  "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/simple_snake.c.dir/src/view.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

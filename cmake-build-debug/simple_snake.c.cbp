@@ -87,7 +87,13 @@
 		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c">
 			<Option target="simple_snake.c"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c">
+		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h">
+			<Option target="simple_snake.c"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c">
+			<Option target="simple_snake.c"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h">
 			<Option target="simple_snake.c"/>
 		</Unit>
 		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/CMakeLists.txt">

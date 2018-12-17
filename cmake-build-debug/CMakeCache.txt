@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+.c_BINARY_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug
+
+//Value Computed by CMake
+.c_SOURCE_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar.exe
 
@@ -150,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=simple_snake.c
+CMAKE_PROJECT_NAME:STATIC=main.c
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib.exe
@@ -235,11 +241,23 @@ C_BINARY_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/
 //Value Computed by CMake
 C_SOURCE_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project
 
+//Value Computed by CMake
+Main.c_BINARY_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug
+
+//Value Computed by CMake
+Main.c_SOURCE_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project
+
 //Path to a program.
 ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf.exe
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=ProcessorCount_cmd_sysctl-NOTFOUND
+
+//Value Computed by CMake
+main.c_BINARY_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug
+
+//Value Computed by CMake
+main.c_SOURCE_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project
 
 //Value Computed by CMake
 project_BINARY_DIR:STATIC=/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug

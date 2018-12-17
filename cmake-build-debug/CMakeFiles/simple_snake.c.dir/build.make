@@ -57,22 +57,9 @@ include CMakeFiles/simple_snake.c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/simple_snake.c.dir/flags.make
 
-CMakeFiles/simple_snake.c.dir/src/main.c.o: CMakeFiles/simple_snake.c.dir/flags.make
-CMakeFiles/simple_snake.c.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/simple_snake.c.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/simple_snake.c.dir/src/main.c.o   -c "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c"
-
-CMakeFiles/simple_snake.c.dir/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/simple_snake.c.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" > CMakeFiles/simple_snake.c.dir/src/main.c.i
-
-CMakeFiles/simple_snake.c.dir/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/simple_snake.c.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" -o CMakeFiles/simple_snake.c.dir/src/main.c.s
-
 CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o: CMakeFiles/simple_snake.c.dir/flags.make
 CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o: ../src/simple_snake.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o   -c "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c"
 
 CMakeFiles/simple_snake.c.dir/src/simple_snake.c.i: cmake_force
@@ -83,16 +70,29 @@ CMakeFiles/simple_snake.c.dir/src/simple_snake.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/simple_snake.c.dir/src/simple_snake.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c" -o CMakeFiles/simple_snake.c.dir/src/simple_snake.c.s
 
+CMakeFiles/simple_snake.c.dir/src/view.c.o: CMakeFiles/simple_snake.c.dir/flags.make
+CMakeFiles/simple_snake.c.dir/src/view.c.o: ../src/view.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/simple_snake.c.dir/src/view.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/simple_snake.c.dir/src/view.c.o   -c "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c"
+
+CMakeFiles/simple_snake.c.dir/src/view.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/simple_snake.c.dir/src/view.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c" > CMakeFiles/simple_snake.c.dir/src/view.c.i
+
+CMakeFiles/simple_snake.c.dir/src/view.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/simple_snake.c.dir/src/view.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c" -o CMakeFiles/simple_snake.c.dir/src/view.c.s
+
 # Object files for target simple_snake.c
 simple_snake_c_OBJECTS = \
-"CMakeFiles/simple_snake.c.dir/src/main.c.o" \
-"CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o"
+"CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o" \
+"CMakeFiles/simple_snake.c.dir/src/view.c.o"
 
 # External object files for target simple_snake.c
 simple_snake_c_EXTERNAL_OBJECTS =
 
-simple_snake.c.exe: CMakeFiles/simple_snake.c.dir/src/main.c.o
 simple_snake.c.exe: CMakeFiles/simple_snake.c.dir/src/simple_snake.c.o
+simple_snake.c.exe: CMakeFiles/simple_snake.c.dir/src/view.c.o
 simple_snake.c.exe: CMakeFiles/simple_snake.c.dir/build.make
 simple_snake.c.exe: ../sdl2/sdl2-lib/libSDL2.a
 simple_snake.c.exe: ../sdl2/sdl2-lib/libSDL2main.a
