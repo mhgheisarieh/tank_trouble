@@ -590,9 +590,7 @@ close_code.h
 
 ../sdl2/sdl2-include/close_code.h
 
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c
 stdio.h
 -
 stdbool.h
@@ -605,10 +603,18 @@ SDL.h
 -
 SDL2_gfxPrimitives.h
 -
-view.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
+physics.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 struct.h
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+SDL.h
+-
+SDL2_gfxPrimitives.h
+-
+stdbool.h
+-
 

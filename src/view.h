@@ -2,8 +2,9 @@
 #ifndef MAIN_C_VIEW_H
 #define MAIN_C_VIEW_H
 
-#endif //MAIN_C_VIEW_H
+#include "struct.h"
 
-void moveTank(SDL_Keycode key, double* tank_x, double* tank_y);
-int handleEvents(double* tank_x, double* tank_y);
-void init_window();
+int handleEvents(Tank* tank);
+void DrawTank (SDL_Renderer* renderer , Tank tank[]);
+void Quit (SDL_Renderer* renderer ,  SDL_Window* window);
+#endif //MAIN_C_VIEW_H
