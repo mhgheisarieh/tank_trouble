@@ -4,10 +4,8 @@
 #include <SDL.h>
 #include <SDL2_gfxPrimitives.h>
 #include <stdbool.h>
+#include "constants.h"
 
-#define Step 3
-#define NumOfTank 1
-#define DegStep 0.05
 typedef struct {
     bool Up_key , Down_key , Right_Key , Left_Key;
 }keyboard;
@@ -17,11 +15,19 @@ typedef struct {
 } Color;
 
 typedef struct {
+    int Exist;
+    Sint16 x, y, r;
+    double deg, TimeAppear;
+} Bullet;
+
+typedef struct {
     Sint16 x ,y , radius;
     double deg ;
-    SDL_Keycode Up_key , Down_key , Right_Key , Left_Key;
+    SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
     keyboard Key;
     Color Color;
+    Bullet bullet[NumOfBulls];
+    int NumOFExitBulls;
 } Tank;
 
 #endif

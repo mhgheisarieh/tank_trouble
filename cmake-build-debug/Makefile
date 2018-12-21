@@ -123,6 +123,33 @@ main.c/fast:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
 .PHONY : main.c/fast
 
+src/DefinitionOfTanks.o: src/DefinitionOfTanks.c.o
+
+.PHONY : src/DefinitionOfTanks.o
+
+# target to build an object file
+src/DefinitionOfTanks.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o
+.PHONY : src/DefinitionOfTanks.c.o
+
+src/DefinitionOfTanks.i: src/DefinitionOfTanks.c.i
+
+.PHONY : src/DefinitionOfTanks.i
+
+# target to preprocess a source file
+src/DefinitionOfTanks.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.i
+.PHONY : src/DefinitionOfTanks.c.i
+
+src/DefinitionOfTanks.s: src/DefinitionOfTanks.c.s
+
+.PHONY : src/DefinitionOfTanks.s
+
+# target to generate assembly for a file
+src/DefinitionOfTanks.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.s
+.PHONY : src/DefinitionOfTanks.c.s
+
 src/logic.o: src/logic.c.o
 
 .PHONY : src/logic.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... main.c"
 	@echo "... edit_cache"
+	@echo "... src/DefinitionOfTanks.o"
+	@echo "... src/DefinitionOfTanks.i"
+	@echo "... src/DefinitionOfTanks.s"
 	@echo "... src/logic.o"
 	@echo "... src/logic.i"
 	@echo "... src/logic.s"

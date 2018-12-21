@@ -26,3 +26,23 @@ void turnTank(Tank* tank){
     if (tank->Key.Left_Key)
         tank->deg -= DegStep;
 }
+
+void fire(Tank* tank){
+    if (tank->NumOFExitBulls == NumOfBulls) return;
+    int i;
+    for (i=0; i<NumOfBulls; i++)
+        if (tank->bullet[i].Exist==0){
+            break;
+        }
+    tank->bullet[i].Exist =1;
+    tank->bullet[i].deg = tank->deg;
+    tank->bullet[i].x = tank->x + 25*(cosf(tank->deg));
+    tank->bullet[i].y = tank->y + 25*(sinf(tank->deg));
+    tank->bullet[i].TimeAppear = SDL_GetTicks();
+    tank->NumOFExitBulls ++;
+}
+
+void move_bullet(Bullet* bullet){
+    bullet->y += BullStep*(sinf(bullet->deg));
+    bullet->x += BullStep*(cosf(bullet->deg));
+}
