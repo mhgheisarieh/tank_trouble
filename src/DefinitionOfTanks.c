@@ -2,8 +2,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <math.h>
-#include <SDL.h>
-#include <SDL2_gfxPrimitives.h>
 #include "DefinitionOfTanks.h"
 
 void Definition(Tank *tank){
@@ -11,9 +9,9 @@ void Definition(Tank *tank){
     tank[0].y = 500;
     tank[0].deg = 0;
     tank[0].radius = 15;
-    tank[0].Color.r = 230;
-    tank[0].Color.g = 25;
-    tank[0].Color.b = 25;
+    tank[0].Color.r = 250;
+    tank[0].Color.g = 0;
+    tank[0].Color.b = 0;
     tank[0].Color.a = 255;
     tank[0].Down_key =SDLK_DOWN;
     tank[0].Up_key =SDLK_UP;

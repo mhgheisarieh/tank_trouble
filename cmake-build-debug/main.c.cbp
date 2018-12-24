@@ -102,6 +102,12 @@
 		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c">
 			<Option target="main.c"/>
 		</Unit>
+		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c">
+			<Option target="main.c"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h">
+			<Option target="main.c"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c">
 			<Option target="main.c"/>
 		</Unit>

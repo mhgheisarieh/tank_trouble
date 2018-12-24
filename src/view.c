@@ -23,8 +23,6 @@ int handleEvents(Tank* tank) {
                 if (event.key.keysym.sym == (tank+i)->Shoot_Key){
                     fire(tank+i);
                 }
-                moveTank((tank+i));
-                turnTank((tank+i));
             }
             if (event.type == SDL_KEYUP) {
                 if (event.key.keysym.sym == (tank+i)->Down_key)
@@ -35,8 +33,6 @@ int handleEvents(Tank* tank) {
                     (tank+i)->Key.Left_Key = 0;
                 if (event.key.keysym.sym == (tank+i)->Right_Key)
                     (tank+i)->Key.Right_Key = 0;
-                moveTank(tank+i);
-                turnTank(tank+i);
             }
         }
         if (event.window.event==SDL_WINDOWEVENT_CLOSE)
@@ -48,6 +44,11 @@ int handleEvents(Tank* tank) {
                 move_bullet(&(tank+i)->bullet[j]);
 }
 
+
+void DrawMap (Map* map){
+
+}
+
 void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
     for (int i = 0; i < NumOfTank; i++) {
         filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
@@ -57,25 +58,33 @@ void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
     }
 }
 
-void Quit (SDL_Renderer* renderer ,  SDL_Window* window){
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+void DrawWalls (SDL_Renderer* renderer, Wall* wall){
+    int i =0;
+    while ((wall+i)->exist == 1){
+        thickLineRGBA(renderer, (wall+i)->Rx1 , (wall+i)->Ry1 , (wall+i)->Rx2 , (wall+i)->Ry2 , 3 , wall->Color.r , wall->Color.g , wall->Color.b , wall->Color.a);
+        i++;
+    }
 }
 
 void DrawBullets (SDL_Renderer* renderer, Tank tank[]){
     for (int i = 0; i < NumOfTank; i++)
         for (int j = 0; j < NumOfBulls; j++)
             if((tank + i)->bullet[j].Exist){
-                Draw_Bullet(renderer, &((tank+i)->bullet[j]));
+                DrawBullet(renderer, &((tank+i)->bullet[j]));
                 if (!IsAliveBullet (&((tank+i)->bullet[j]))){
                     (tank+i)->NumOFExitBulls --;
                 }
             }
 }
 
-void Draw_Bullet (SDL_Renderer* renderer, Bullet* bullet){
+void DrawBullet (SDL_Renderer* renderer, Bullet* bullet){
     filledCircleRGBA(renderer, bullet->x, bullet->y, 3, 0, 0, 0, 255);
+}
+
+void Quit (SDL_Renderer* renderer ,  SDL_Window* window){
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
 }
 
 bool IsAliveBullet (Bullet* bullet){

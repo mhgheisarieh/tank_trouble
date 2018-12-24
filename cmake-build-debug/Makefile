@@ -204,6 +204,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/maps.o: src/maps.c.o
+
+.PHONY : src/maps.o
+
+# target to build an object file
+src/maps.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/maps.c.o
+.PHONY : src/maps.c.o
+
+src/maps.i: src/maps.c.i
+
+.PHONY : src/maps.i
+
+# target to preprocess a source file
+src/maps.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/maps.c.i
+.PHONY : src/maps.c.i
+
+src/maps.s: src/maps.c.s
+
+.PHONY : src/maps.s
+
+# target to generate assembly for a file
+src/maps.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/maps.c.s
+.PHONY : src/maps.c.s
+
 src/physics.o: src/physics.c.o
 
 .PHONY : src/physics.o
@@ -276,6 +303,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/maps.o"
+	@echo "... src/maps.i"
+	@echo "... src/maps.s"
 	@echo "... src/physics.o"
 	@echo "... src/physics.i"
 	@echo "... src/physics.s"

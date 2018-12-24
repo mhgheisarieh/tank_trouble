@@ -36,8 +36,8 @@ void fire(Tank* tank){
         }
     tank->bullet[i].Exist =1;
     tank->bullet[i].deg = tank->deg;
-    tank->bullet[i].x = tank->x + 25*(cosf(tank->deg));
-    tank->bullet[i].y = tank->y + 25*(sinf(tank->deg));
+    tank->bullet[i].x = tank->x + 27*(cosf(tank->deg));
+    tank->bullet[i].y = tank->y + 27*(sinf(tank->deg));
     tank->bullet[i].TimeAppear = SDL_GetTicks();
     tank->NumOFExitBulls ++;
 }

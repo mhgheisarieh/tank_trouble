@@ -21,6 +21,13 @@ typedef struct {
 } Bullet;
 
 typedef struct {
+    int x1, y1, x2, y2;
+    double Rx1, Ry1, Rx2, Ry2;
+    Color Color;
+    bool exist;
+} Wall;
+
+typedef struct {
     Sint16 x ,y , radius;
     double deg ;
     SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
@@ -29,5 +36,11 @@ typedef struct {
     Bullet bullet[NumOfBulls];
     int NumOFExitBulls;
 } Tank;
+
+typedef struct {
+    int x , y;
+    Wall wall[MaxNumOfWalls];
+    Tank tank [NumOfTank];
+} Map;
 
 #endif
