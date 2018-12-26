@@ -5,7 +5,7 @@
 #include "struct.h"
 #include <stdbool.h>
 
-int handleEvents(Tank* tank);
+int handleEvents(Map* map);
 void DrawTanks (SDL_Renderer* renderer , Tank tank[]);
 void DrawBullets (SDL_Renderer* renderer, Tank tank[]);
 void DrawWalls (SDL_Renderer* renderer, Wall* wall);

@@ -590,7 +590,45 @@ close_code.h
 
 ../sdl2/sdl2-include/close_code.h
 
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.c
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+math.h
+-
+DefinitionOfTanks.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.h
+
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.h
+struct.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
+
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+math.h
+-
+SDL.h
+-
+SDL2_gfxPrimitives.h
+-
+struct.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+logic.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
+
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
+struct.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c
 stdio.h
@@ -618,6 +656,26 @@ view.h
 struct.h
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+math.h
+-
+SDL.h
+-
+SDL2_gfxPrimitives.h
+-
+physics.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+struct.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 SDL.h
 -
@@ -627,6 +685,26 @@ stdbool.h
 -
 constants.h
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
+
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+math.h
+-
+SDL.h
+-
+SDL2_gfxPrimitives.h
+-
+view.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
+physics.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+logic.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
 
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
 struct.h

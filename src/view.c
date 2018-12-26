@@ -6,44 +6,53 @@
 #include <SDL2_gfxPrimitives.h>
 #include "view.h"
 #include "physics.h"
+#include "logic.h"
 
-int handleEvents(Tank* tank) {
+int handleEvents(Map* map) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         for (int i=0; i<NumOfTank; i++){
             if (event.type == SDL_KEYDOWN) {
-                if (event.key.keysym.sym == (tank+i)->Down_key)
-                    (tank+i)->Key.Down_key = 1;
-                if (event.key.keysym.sym == (tank+i)->Up_key)
-                    (tank+i)->Key.Up_key = 1;
-                if (event.key.keysym.sym == (tank+i)->Left_Key)
-                    (tank+i)->Key.Left_Key = 1;
-                if (event.key.keysym.sym == (tank+i)->Right_Key)
-                    (tank+i)->Key.Right_Key = 1;
-                if (event.key.keysym.sym == (tank+i)->Shoot_Key){
-                    fire(tank+i);
+                if (event.key.keysym.sym == map->tank[i].Down_key)
+                    map->tank[i].Key.Down_key = 1;
+                if (event.key.keysym.sym == map->tank[i].Up_key)
+                    map->tank[i].Key.Up_key = 1;
+                if (event.key.keysym.sym == map->tank[i].Left_Key)
+                    map->tank[i].Key.Left_Key = 1;
+                if (event.key.keysym.sym == map->tank[i].Right_Key)
+                    map->tank[i].Key.Right_Key = 1;
+                if (event.key.keysym.sym == map->tank[i].Shoot_Key && map->tank[i].canshoot) {
+                    fire(&(map->tank[i]));
+                    map->tank[i].canshoot = false;
                 }
             }
             if (event.type == SDL_KEYUP) {
-                if (event.key.keysym.sym == (tank+i)->Down_key)
-                    (tank+i)->Key.Down_key = 0;
-                if (event.key.keysym.sym == (tank+i)->Up_key)
-                    (tank+i)->Key.Up_key = 0;
-                if (event.key.keysym.sym == (tank+i)->Left_Key)
-                    (tank+i)->Key.Left_Key = 0;
-                if (event.key.keysym.sym == (tank+i)->Right_Key)
-                    (tank+i)->Key.Right_Key = 0;
+                if (event.key.keysym.sym == map->tank[i].Down_key)
+                    map->tank[i].Key.Down_key = 0;
+                if (event.key.keysym.sym == map->tank[i].Up_key) {
+                    map->tank[i].Key.Up_key = 0;
+                }
+                if (event.key.keysym.sym == map->tank[i].Left_Key) {
+                    map->tank[i].Key.Left_Key = 0;
+                }
+                if (event.key.keysym.sym == map->tank[i].Right_Key) {
+                    map->tank[i].Key.Right_Key = 0;
+                }
+                if (event.key.keysym.sym == map->tank[i].Shoot_Key) {
+                    map->tank[i].canshoot = true;
+                }
             }
         }
         if (event.window.event==SDL_WINDOWEVENT_CLOSE)
             return 12345;
     }
-    for (int i=0; i<NumOfTank; i++)
+    for (int i=0; i<NumOfTank; i++){
+        //IsWall(&map);
         for (int j=0; j<NumOfBulls; j++)
-            if ((tank+i)->bullet[j].Exist)
-                move_bullet(&(tank+i)->bullet[j]);
+            if (map->tank[i].bullet[j].Exist)
+                move_bullet(&map->tank[i].bullet[j]);
+    }
 }
-
 
 void DrawMap (Map* map){
 
@@ -52,9 +61,9 @@ void DrawMap (Map* map){
 void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
     for (int i = 0; i < NumOfTank; i++) {
         filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
-        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 1.5, 0, 0, 0, 255);
+        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 1.5, 0, 0, 0, 200);
         filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 4, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
-        thickLineRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->x + (30 * cosf((tank+i)->deg)), (tank+i)->y +(30 * sinf((tank+i)->deg)), (tank+i)->radius / 4, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
+        thickLineRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->x + (20 * cosf((tank+i)->deg)), (tank+i)->y +(20 * sinf((tank+i)->deg)), (tank+i)->radius / 4, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
     }
 }
 

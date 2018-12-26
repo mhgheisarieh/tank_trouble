@@ -21,17 +21,12 @@ void LoadMap (Map* map){
     }
     strcat (filename , ".txt");
     fp = fopen(filename, "r");
-    int NumOfWalls;
-    fscanf(fp, "%d\n", &NumOfWalls);
-    for (int i=0; i<NumOfWalls; i++){
+    fscanf(fp, "%d\n", &map->NumOfWalls);
+    for (int i=0; i<map->NumOfWalls; i++){
         fscanf(fp, "%d %d %d %d\n", &map->wall[i].x1, &map->wall[i].y1 , &map->wall[i].x2 , &map->wall[i].y2);
-        if (i + 1 == NumOfWalls){
+        if (i + 1 == map->NumOfWalls){
             map->x = map->wall[i].x2;
             map->y = map->wall[i].y2;
-         /*  map->wall[i+1].x1 = 0;
-            map->wall[i+1].x2 = 0;
-            map->wall[i+1].y1 = 0;
-            map->wall[i+1].y2 = 0;*/
         }
         map->wall[i].exist = 1;
         map->wall[i].Color.a = 255;
@@ -40,7 +35,7 @@ void LoadMap (Map* map){
         map->wall[i].Color.b = 0;
     }
     fclose(fp);
-    for (int i=0; i<NumOfWalls; i++){
+    for (int i=0; i<map->NumOfWalls; i++){
         map->wall[i].Rx1 = 25.0 + 750.0 * map->wall[i].x1 / map->x;
         map->wall[i].Rx2 = 25.0 + 750.0 * map->wall[i].x2 / map->x;
         map->wall[i].Ry1 = 25.0 + 750.0 * map->wall[i].y1 / map->y;

@@ -10,6 +10,7 @@
 #include "DefinitionOfTanks.h"
 #include "maps.h"
 #include "physics.h"
+#include "logic.h"
 
 #ifdef main
 #undef main
@@ -25,7 +26,7 @@ int main(int argc , char* argv[]){
     while (1) {
         int flag = 1;
         int start_ticks = SDL_GetTicks();
-        if (handleEvents(&map.tank) == 12345){
+        if (handleEvents(&map) == 12345){
             Quit(renderer, window);
             break;
         }
@@ -35,6 +36,7 @@ int main(int argc , char* argv[]){
         DrawBullets (renderer, &map.tank);
         DrawWalls (renderer, &map.wall);
         SDL_RenderPresent(renderer);
+        IsWall(&map);
         for (int i=0 ; i<NumOfTank; i++){
             moveTank(&map.tank[i]);
             turnTank(&map.tank[i]);

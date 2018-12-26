@@ -7,4 +7,5 @@ void moveTank(Tank* tank);
 void turnTank(Tank* tank);
 void fire(Tank* tank);
 void move_bullet(Bullet* bullet);
+int IsPlus(double i);
 #endif //MAIN_C_PHYSICS_H

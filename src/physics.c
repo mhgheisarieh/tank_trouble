@@ -7,17 +7,56 @@
 
 #include "physics.h"
 
+int IsPlus(double i){
+    if (i>=0) return 1;
+    return 0;
+}
 void moveTank(Tank* tank) {
-    if (!(tank->Key.Up_key && tank->Key.Down_key)){
-        if (tank->Key.Up_key){
-            tank->y += Step*(sinf(tank->deg));
-            tank->x += Step*(cosf(tank->deg));
+    if (tank->Key.Up_key && tank->Key.Down_key) return;
+    if (tank->Key.Up_key){
+        if (IsPlus(sin(tank->deg))){
+            if (tank->CanYPlus)
+                tank->y += Step*(sinf(tank->deg));
+        } else {
+            if (tank->CanYMinus)
+                tank->y += Step*(sinf(tank->deg));
         }
-        if (tank->Key.Down_key){
-            tank->y -= Step*(sinf(tank->deg));
-            tank->x -= Step*(cosf(tank->deg));
+        if (IsPlus(cos(tank->deg))){
+            if (tank->CanXPlus)
+                tank->x += Step*(cosf(tank->deg));
+        } else {
+            if (tank->CanXMinus)
+                tank->x += Step*(cosf(tank->deg));
         }
     }
+    if (tank->Key.Down_key){
+        if (IsPlus(sin(tank->deg))){
+            if (tank->CanYMinus)
+                tank->y -= Step*(sinf(tank->deg));
+        } else {
+            if (tank->CanYPlus)
+                tank->y -= Step*(sinf(tank->deg));
+        }
+        if (IsPlus(cos(tank->deg))){
+            if (tank->CanXMinus)
+                tank->x -= Step*(cosf(tank->deg));
+        } else {
+            if (tank->CanXPlus)
+                tank->x -= Step*(cosf(tank->deg));
+        }
+    }
+//        if (tank->Key.Up_key){
+//            if (tank->CanYPlus && IsPlus(sin(tank->deg)))
+//                tank->y += Step*(sinf(tank->deg));
+//            if (tank->CanXPlus && IsPlus(cos(tank->deg)))
+//                tank->x += Step*(cosf(tank->deg));
+//        }
+//        if (tank->Key.Down_key){
+//            if (tank->CanYMinus && !IsPlus(sin(tank->deg)))
+//                tank->y -= Step*(sinf(tank->deg));
+//            if (tank->CanXMinus && !IsPlus(cos(tank->deg)))
+//                tank->x -= Step*(cosf(tank->deg));
+//        }
 }
 
 void turnTank(Tank* tank){
@@ -36,8 +75,8 @@ void fire(Tank* tank){
         }
     tank->bullet[i].Exist =1;
     tank->bullet[i].deg = tank->deg;
-    tank->bullet[i].x = tank->x + 27*(cosf(tank->deg));
-    tank->bullet[i].y = tank->y + 27*(sinf(tank->deg));
+    tank->bullet[i].x = tank->x + 20*(cosf(tank->deg));
+    tank->bullet[i].y = tank->y + 20*(sinf(tank->deg));
     tank->bullet[i].TimeAppear = SDL_GetTicks();
     tank->NumOFExitBulls ++;
 }

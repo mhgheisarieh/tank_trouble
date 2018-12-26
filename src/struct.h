@@ -32,13 +32,15 @@ typedef struct {
     double deg ;
     SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
     keyboard Key;
+    bool CanXPlus ,CanYPlus , CanXMinus , CanYMinus;
     Color Color;
     Bullet bullet[NumOfBulls];
     int NumOFExitBulls;
+    bool canshoot;
 } Tank;
 
 typedef struct {
-    int x , y;
+    int x , y , NumOfWalls;
     Wall wall[MaxNumOfWalls];
     Tank tank [NumOfTank];
 } Map;
