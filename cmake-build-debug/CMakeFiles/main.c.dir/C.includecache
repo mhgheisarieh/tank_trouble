@@ -590,41 +590,7 @@ close_code.h
 
 ../sdl2/sdl2-include/close_code.h
 
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-DefinitionOfTanks.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.h
-struct.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-SDL.h
--
-SDL2_gfxPrimitives.h
--
-struct.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-logic.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
 
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
 struct.h
@@ -655,22 +621,6 @@ view.h
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
 struct.h
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-SDL.h
--
-SDL2_gfxPrimitives.h
--
-physics.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 struct.h

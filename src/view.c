@@ -47,7 +47,6 @@ int handleEvents(Map* map) {
             return 12345;
     }
     for (int i=0; i<NumOfTank; i++){
-        //IsWall(&map);
         for (int j=0; j<NumOfBulls; j++)
             if (map->tank[i].bullet[j].Exist)
                 move_bullet(&map->tank[i].bullet[j]);
@@ -75,7 +74,7 @@ void DrawWalls (SDL_Renderer* renderer, Wall* wall){
     }
 }
 
-void DrawBullets (SDL_Renderer* renderer, Tank tank[]){
+void DrawBullets (SDL_Renderer* renderer, Tank* tank){
     for (int i = 0; i < NumOfTank; i++)
         for (int j = 0; j < NumOfBulls; j++)
             if((tank + i)->bullet[j].Exist){

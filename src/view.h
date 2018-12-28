@@ -6,8 +6,8 @@
 #include <stdbool.h>
 
 int handleEvents(Map* map);
-void DrawTanks (SDL_Renderer* renderer , Tank tank[]);
-void DrawBullets (SDL_Renderer* renderer, Tank tank[]);
+void DrawTanks (SDL_Renderer* renderer ,Tank* tank);
+void DrawBullets (SDL_Renderer* renderer, Tank* tank);
 void DrawWalls (SDL_Renderer* renderer, Wall* wall);
 void DrawBullet (SDL_Renderer* renderer, Bullet* bullet);
 bool IsAliveBullet (Bullet* bullet);
