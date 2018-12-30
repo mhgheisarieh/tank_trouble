@@ -18,10 +18,10 @@
 
 int main(int argc , char* argv[]){
     Map map;
-    Definition(&map.tank);
+    Definition(&map);
     LoadMap (&map);
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_Window* window = SDL_CreateWindow("Alter Tank", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_OPENGL);
+    SDL_Window* window = SDL_CreateWindow("Alter Tank", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     while (1) {
         int flag = 1;
@@ -32,9 +32,7 @@ int main(int argc , char* argv[]){
         }
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
-        DrawTanks (renderer , &map.tank);
-        DrawBullets (renderer, &map.tank);
-        DrawWalls (renderer, &map.wall);
+        DrawMap(renderer , &map);
         SDL_RenderPresent(renderer);
         IsWall(&map);
         for (int i=0 ; i<NumOfTank; i++){

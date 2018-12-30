@@ -12,6 +12,6 @@ void DrawWalls (SDL_Renderer* renderer, Wall* wall);
 void DrawBullet (SDL_Renderer* renderer, Bullet* bullet);
 bool IsAliveBullet (Bullet* bullet);
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window);
-void DrawMap (Map* map);
+void DrawMap (SDL_Renderer* renderer ,Map* map);
 
 #endif //MAIN_C_VIEW_H

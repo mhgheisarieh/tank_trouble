@@ -53,8 +53,10 @@ int handleEvents(Map* map) {
     }
 }
 
-void DrawMap (Map* map){
-
+void DrawMap (SDL_Renderer* renderer ,Map* map){
+    DrawTanks (renderer , map->tank);
+    DrawBullets (renderer, map->tank);
+    DrawWalls (renderer, map->wall);
 }
 
 void DrawTanks (SDL_Renderer* renderer , Tank* tank) {

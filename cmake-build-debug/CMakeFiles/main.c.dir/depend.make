@@ -49,6 +49,7 @@ CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o: ../sdl2/sdl2-include/close_code
 CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o: ../src/DefinitionOfTanks.c
 CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o: ../src/DefinitionOfTanks.h
 CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o: ../src/constants.h
+CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o: ../src/logic.h
 CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o: ../src/struct.h
 
 CMakeFiles/main.c.dir/src/logic.c.o: ../sdl2/sdl2-gfx-include/SDL2_gfxPrimitives.h

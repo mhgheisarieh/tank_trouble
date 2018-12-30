@@ -16,17 +16,17 @@ void moveTank(Tank* tank) {
     if (tank->Key.Up_key){
         if (IsPlus(sin(tank->deg))){
             if (tank->CanYPlus)
-                tank->y += Step*(sinf(tank->deg));
+                tank->y = (Sint16) (tank->y + Step *(sinf((float) tank->deg)));
         } else {
             if (tank->CanYMinus)
-                tank->y += Step*(sinf(tank->deg));
+                tank->y = (Sint16) (tank->y + Step *(sinf((float) tank->deg)));
         }
         if (IsPlus(cos(tank->deg))){
             if (tank->CanXPlus)
-                tank->x += Step*(cosf(tank->deg));
+                tank->x = (Sint16) (tank->x + Step *(cosf((float) tank->deg)));
         } else {
             if (tank->CanXMinus)
-                tank->x += Step*(cosf(tank->deg));
+                tank->x = (Sint16) (tank->x + Step *(cosf((float) tank->deg)));
         }
     }
     if (tank->Key.Down_key){
@@ -45,18 +45,6 @@ void moveTank(Tank* tank) {
                 tank->x -= Step*(cosf(tank->deg));
         }
     }
-//        if (tank->Key.Up_key){
-//            if (tank->CanYPlus && IsPlus(sin(tank->deg)))
-//                tank->y += Step*(sinf(tank->deg));
-//            if (tank->CanXPlus && IsPlus(cos(tank->deg)))
-//                tank->x += Step*(cosf(tank->deg));
-//        }
-//        if (tank->Key.Down_key){
-//            if (tank->CanYMinus && !IsPlus(sin(tank->deg)))
-//                tank->y -= Step*(sinf(tank->deg));
-//            if (tank->CanXMinus && !IsPlus(cos(tank->deg)))
-//                tank->x -= Step*(cosf(tank->deg));
-//        }
 }
 
 void turnTank(Tank* tank){

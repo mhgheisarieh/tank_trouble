@@ -592,18 +592,12 @@ close_code.h
 
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
 
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
-struct.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c
 stdio.h
 -
 stdbool.h
 -
 stdlib.h
--
-string.h
 -
 math.h
 -
@@ -611,16 +605,8 @@ SDL.h
 -
 SDL2_gfxPrimitives.h
 -
-time.h
--
-maps.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
-view.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
-struct.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+physics.h
+/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 struct.h
@@ -635,30 +621,4 @@ stdbool.h
 -
 constants.h
 /cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-SDL.h
--
-SDL2_gfxPrimitives.h
--
-view.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
-physics.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
-logic.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
-
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
-struct.h
-/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-stdbool.h
--
 
