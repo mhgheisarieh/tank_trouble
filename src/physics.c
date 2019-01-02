@@ -6,11 +6,13 @@
 #include <SDL2_gfxPrimitives.h>
 
 #include "physics.h"
+#include "logic.h"
 
 int IsPlus(double i){
     if (i>=0) return 1;
     return 0;
 }
+
 void moveTank(Tank* tank) {
     if (tank->Key.Up_key && tank->Key.Down_key) return;
     if (tank->Key.Up_key){
@@ -32,28 +34,32 @@ void moveTank(Tank* tank) {
     if (tank->Key.Down_key){
         if (IsPlus(sin(tank->deg))){
             if (tank->CanYMinus)
-                tank->y -= Step*(sinf(tank->deg));
+                tank->y = (Sint16) (tank->y - Step*(sinf((float) tank->deg)));
         } else {
             if (tank->CanYPlus)
-                tank->y -= Step*(sinf(tank->deg));
+                tank->y = (Sint16) (tank->y - Step*(sinf((float) tank->deg)));
         }
         if (IsPlus(cos(tank->deg))){
             if (tank->CanXMinus)
-                tank->x -= Step*(cosf(tank->deg));
+                tank->x = (Sint16) (tank->x - Step*(cosf((float) tank->deg)));
         } else {
             if (tank->CanXPlus)
-                tank->x -= Step*(cosf(tank->deg));
+                tank->x = (Sint16) (tank->x - Step*(cosf((float) tank->deg)));
         }
     }
 }
 
 void turnTank(Tank* tank){
-    if (tank->Key.Right_Key)
+    if (tank->Key.Right_Key && tank->CanDegPlus)
         tank->deg += DegStep;
-    if (tank->Key.Left_Key)
+    if (tank->Key.Left_Key  && tank->CanDegMinus)
         tank->deg -= DegStep;
 }
 
+void PipePosition (Tank* tank){
+    tank->PipeX = tank -> x + (PipeLength * cosf(tank->deg));
+    tank->PipeY = tank -> y + (PipeLength * sinf(tank->deg));
+}
 void fire(Tank* tank){
     if (tank->NumOFExitBulls == NumOfBulls) return;
     int i;
@@ -63,8 +69,8 @@ void fire(Tank* tank){
         }
     tank->bullet[i].Exist =1;
     tank->bullet[i].deg = tank->deg;
-    tank->bullet[i].x = tank->x + 20*(cosf(tank->deg));
-    tank->bullet[i].y = tank->y + 20*(sinf(tank->deg));
+    tank->bullet[i].x = tank->x + 30*(cosf(tank->deg));
+    tank->bullet[i].y = tank->y + 30*(sinf(tank->deg));
     tank->bullet[i].TimeAppear = SDL_GetTicks();
     tank->NumOFExitBulls ++;
 }

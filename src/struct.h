@@ -29,10 +29,11 @@ typedef struct {
 
 typedef struct {
     Sint16 x ,y , radius;
+    Sint16 PipeX , PipeY;
     double deg ;
     SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
     keyboard Key;
-    bool CanXPlus ,CanYPlus , CanXMinus , CanYMinus;
+    bool CanXPlus ,CanYPlus , CanXMinus , CanYMinus , CanDegPlus , CanDegMinus;
     Color Color;
     Bullet bullet[NumOfBulls];
     int NumOFExitBulls;

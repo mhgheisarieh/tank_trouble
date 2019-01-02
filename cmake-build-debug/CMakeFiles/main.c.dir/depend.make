@@ -100,6 +100,7 @@ CMakeFiles/main.c.dir/src/logic.c.o: ../sdl2/sdl2-include/close_code.h
 CMakeFiles/main.c.dir/src/logic.c.o: ../src/constants.h
 CMakeFiles/main.c.dir/src/logic.c.o: ../src/logic.c
 CMakeFiles/main.c.dir/src/logic.c.o: ../src/logic.h
+CMakeFiles/main.c.dir/src/logic.c.o: ../src/physics.h
 CMakeFiles/main.c.dir/src/logic.c.o: ../src/struct.h
 
 
@@ -200,6 +201,7 @@ CMakeFiles/main.c.dir/src/physics.c.o: ../sdl2/sdl2-include/SDL_video.h
 CMakeFiles/main.c.dir/src/physics.c.o: ../sdl2/sdl2-include/begin_code.h
 CMakeFiles/main.c.dir/src/physics.c.o: ../sdl2/sdl2-include/close_code.h
 CMakeFiles/main.c.dir/src/physics.c.o: ../src/constants.h
+CMakeFiles/main.c.dir/src/physics.c.o: ../src/logic.h
 CMakeFiles/main.c.dir/src/physics.c.o: ../src/physics.c
 CMakeFiles/main.c.dir/src/physics.c.o: ../src/physics.h
 CMakeFiles/main.c.dir/src/physics.c.o: ../src/struct.h

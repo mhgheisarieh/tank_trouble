@@ -8,6 +8,7 @@
 #include "logic.h"
 
 void Definition(Map* map){
+
     srand(time(NULL));
 
     SetXYOfTank (&map->tank[0] , map);
@@ -29,12 +30,13 @@ void Definition(Map* map){
     map->tank[0].CanYPlus = 1;
     map->tank[0].CanXMinus = 1;
     map->tank[0].CanYMinus = 1;
+    map->tank[0].CanDegPlus = 1;
+    map->tank[0].CanDegMinus = 1;
     map->tank[0].NumOFExitBulls = 0;
     map->tank[0].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[0].bullet[i].Exist = 0;}
 
     SetXYOfTank (&map->tank[1] , map);
-    map->tank[1].deg = 1.57;
     map->tank[1].radius = TankRadius;
     map->tank[1].Color.r = 25;
     map->tank[1].Color.g = 100;
@@ -53,6 +55,8 @@ void Definition(Map* map){
     map->tank[1].CanYPlus = 1;
     map->tank[1].CanXMinus = 1;
     map->tank[1].CanYMinus = 1;
+    map->tank[1].CanDegPlus = 1;
+    map->tank[1].CanDegMinus = 1;
     map->tank[1].NumOFExitBulls = 0;
     map->tank[1].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[1].bullet[i].Exist = 0;}
@@ -74,7 +78,8 @@ int random_number(int min_num, int max_num){
 void SetXYOfTank (Tank* tank , Map* map){
     tank->x = (Sint16) random_number(50, 750);
     tank->y = (Sint16) random_number(50, 750);
-    if (CanXPlus(map , tank) && CanXMinus(map , tank) && CanYPlus(map , tank) && CanYMinus(map , tank))
+    tank->deg =  (double) random_number(1 , 628) / 100;
+    if ((!IsTankInWall(map , tank)) && CanYMinus(map , tank) && CanXMinus(map , tank) && CanYPlus(map , tank) && CanXPlus(map , tank))
         return;
     SetXYOfTank(tank , map);
 }

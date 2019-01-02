@@ -44,7 +44,7 @@ int handleEvents(Map* map) {
             }
         }
         if (event.window.event==SDL_WINDOWEVENT_CLOSE)
-            return 12345;
+            return Exit;
     }
     for (int i=0; i<NumOfTank; i++){
         for (int j=0; j<NumOfBulls; j++)
@@ -62,9 +62,8 @@ void DrawMap (SDL_Renderer* renderer ,Map* map){
 void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
     for (int i = 0; i < NumOfTank; i++) {
         filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
-        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 1.5, 0, 0, 0, 200);
-        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 4, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
-        thickLineRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->x + (20 * cosf((tank+i)->deg)), (tank+i)->y +(20 * sinf((tank+i)->deg)), (tank+i)->radius / 4, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
+        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 1.5, 0, 0, 0, 150);
+        thickLineRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->x + (PipeLength * cosf((tank+i)->deg)), (tank+i)->y +(PipeLength * sinf((tank+i)->deg)), (tank+i)->radius / 4, 50,50, 50, 200);
     }
 }
 

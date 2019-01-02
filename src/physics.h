@@ -8,4 +8,5 @@ void turnTank(Tank* tank);
 void fire(Tank* tank);
 void move_bullet(Bullet* bullet);
 int IsPlus(double i);
+void PipePosition (Tank* tank);
 #endif //MAIN_C_PHYSICS_H

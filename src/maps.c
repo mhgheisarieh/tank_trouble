@@ -12,7 +12,7 @@
 
 void LoadMap (Map* map){
     FILE *fp;
-    char filename [10] = "maps\\" ;
+    char filename [10] = "maps/" ;
     srand(time(NULL));
     int k = rand() % 3;
     filename [5]= '0' + k + 1;

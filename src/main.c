@@ -18,15 +18,14 @@
 
 int main(int argc , char* argv[]){
     Map map;
-    Definition(&map);
     LoadMap (&map);
+    Definition(&map);
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window* window = SDL_CreateWindow("Alter Tank", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     while (1) {
-        int flag = 1;
         int start_ticks = SDL_GetTicks();
-        if (handleEvents(&map) == 12345){
+        if (handleEvents(&map) == Exit){
             Quit(renderer, window);
             break;
         }
@@ -34,8 +33,9 @@ int main(int argc , char* argv[]){
         SDL_RenderClear(renderer);
         DrawMap(renderer , &map);
         SDL_RenderPresent(renderer);
-        IsWall(&map);
+        Logics(&map);
         for (int i=0 ; i<NumOfTank; i++){
+            PipePosition (&map.tank[i]);
             moveTank(&map.tank[i]);
             turnTank(&map.tank[i]);
         }
