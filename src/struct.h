@@ -16,8 +16,8 @@ typedef struct {
 
 typedef struct {
     int Exist;
-    Sint16 x, y, r;
-    double deg, TimeAppear;
+    double x, y, r;
+    double TimeAppear , CosDeg , SinDeg;
 } Bullet;
 
 typedef struct {
@@ -28,9 +28,8 @@ typedef struct {
 } Wall;
 
 typedef struct {
-    Sint16 x ,y , radius;
-    Sint16 PipeX , PipeY;
-    double deg ;
+    double x ,y , radius;
+    double deg;
     SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
     keyboard Key;
     bool CanXPlus ,CanYPlus , CanXMinus , CanYMinus , CanDegPlus , CanDegMinus;

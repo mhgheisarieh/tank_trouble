@@ -56,10 +56,6 @@ void turnTank(Tank* tank){
         tank->deg -= DegStep;
 }
 
-void PipePosition (Tank* tank){
-    tank->PipeX = tank -> x + (PipeLength * cosf(tank->deg));
-    tank->PipeY = tank -> y + (PipeLength * sinf(tank->deg));
-}
 void fire(Tank* tank){
     if (tank->NumOFExitBulls == NumOfBulls) return;
     int i;
@@ -68,14 +64,41 @@ void fire(Tank* tank){
             break;
         }
     tank->bullet[i].Exist =1;
-    tank->bullet[i].deg = tank->deg;
-    tank->bullet[i].x = tank->x + 30*(cosf(tank->deg));
-    tank->bullet[i].y = tank->y + 30*(sinf(tank->deg));
+    tank->bullet[i].CosDeg = cosf((float)tank->deg);
+    tank->bullet[i].SinDeg = sinf((float)tank->deg);
+    tank->bullet[i].x = tank->x + PipeLength*(cosf((float)tank->deg));
+    tank->bullet[i].y = tank->y + PipeLength*(sinf((float)tank->deg));
     tank->bullet[i].TimeAppear = SDL_GetTicks();
     tank->NumOFExitBulls ++;
 }
 
-void move_bullet(Bullet* bullet){
-    bullet->y += BullStep*(sinf(bullet->deg));
-    bullet->x += BullStep*(cosf(bullet->deg));
+void move_bullet(Bullet* bullet , Map* map){
+    Bullet tmp;
+    tmp = *bullet;
+    TMPMoveBullet (&tmp);
+    for (int WallNum = 0; WallNum < map->NumOfWalls ; WallNum++){
+        if(map->wall[WallNum].x1 == map->wall[WallNum].x2) {
+
+            if(bullet->y >= map->wall[WallNum].Ry1 && bullet->y <= map->wall[WallNum].Ry2) {
+                if((tmp.x <= map->wall[WallNum].Rx1 && bullet->x >= map->wall[WallNum].Rx1)
+                || (tmp.x >= map->wall[WallNum].Rx1 && bullet->x <= map->wall[WallNum].Rx1)){
+                    bullet->CosDeg *= -1;
+                }
+            }
+        } else if(map->wall[WallNum].y1 == map->wall[WallNum].y2) {
+            if(bullet->x >= map->wall[WallNum].Rx1 && bullet->x <= map->wall[WallNum].Rx2) {
+                if((tmp.y <= map->wall[WallNum].Ry1 && bullet->y >= map->wall[WallNum].Ry1)
+                || (tmp.y >= map->wall[WallNum].Ry1 && bullet->y <= map->wall[WallNum].Ry1 )){
+                    bullet->SinDeg *= -1;
+                }
+            }
+        }
+    }
+    bullet->y += BullStep* bullet->SinDeg ;
+    bullet->x += BullStep* bullet->CosDeg ;
+}
+
+void TMPMoveBullet (Bullet* bullet){
+    bullet->y += BullStep* bullet->SinDeg ;
+    bullet->x += BullStep* bullet->CosDeg ;
 }

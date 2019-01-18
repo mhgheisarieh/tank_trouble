@@ -6,8 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.c.dir/src/physics.c.o"
   "CMakeFiles/main.c.dir/src/view.c.o"
   "main.c.pdb"
-  "main.c.exe"
-  "libmain.c.dll.a"
+  "main.c"
 )
 
 # Per-language clean rules from dependency scanning.

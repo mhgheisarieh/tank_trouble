@@ -4,15 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/main.c.o"
-  "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/simple_snake.c.o"
+  "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.c" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o"
+  "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/logic.c.o"
+  "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/main.c.o"
+  "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/maps.c.o"
+  "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/physics.c.o"
+  "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/src/view.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../sdl2/sdl2-include"
-  "../sdl2/sdl2-gfx-include"
+  "/usr/include/SDL2"
   )
 
 # Targets to which this target links.

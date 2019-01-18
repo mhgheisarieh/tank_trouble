@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Asus/.CLion2018.3/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /etc/clion-2018.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Asus/.CLion2018.3/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /etc/clion-2018.3.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project"
+CMAKE_SOURCE_DIR = "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug"
+CMAKE_BINARY_DIR = "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/project_name.dir/depend.make
@@ -57,52 +57,109 @@ include CMakeFiles/project_name.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/project_name.dir/flags.make
 
+CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o: CMakeFiles/project_name.dir/flags.make
+CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o: ../src/DefinitionOfTanks.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.c"
+
+CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.c" > CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.i
+
+CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/DefinitionOfTanks.c" -o CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.s
+
+CMakeFiles/project_name.dir/src/logic.c.o: CMakeFiles/project_name.dir/flags.make
+CMakeFiles/project_name.dir/src/logic.c.o: ../src/logic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/project_name.dir/src/logic.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/logic.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c"
+
+CMakeFiles/project_name.dir/src/logic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/logic.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c" > CMakeFiles/project_name.dir/src/logic.c.i
+
+CMakeFiles/project_name.dir/src/logic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/logic.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c" -o CMakeFiles/project_name.dir/src/logic.c.s
+
 CMakeFiles/project_name.dir/src/main.c.o: CMakeFiles/project_name.dir/flags.make
 CMakeFiles/project_name.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/project_name.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/main.c.o   -c "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/project_name.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/main.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c"
 
 CMakeFiles/project_name.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" > CMakeFiles/project_name.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" > CMakeFiles/project_name.dir/src/main.c.i
 
 CMakeFiles/project_name.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" -o CMakeFiles/project_name.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c" -o CMakeFiles/project_name.dir/src/main.c.s
 
-CMakeFiles/project_name.dir/src/simple_snake.c.o: CMakeFiles/project_name.dir/flags.make
-CMakeFiles/project_name.dir/src/simple_snake.c.o: ../src/simple_snake.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/project_name.dir/src/simple_snake.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/simple_snake.c.o   -c "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c"
+CMakeFiles/project_name.dir/src/maps.c.o: CMakeFiles/project_name.dir/flags.make
+CMakeFiles/project_name.dir/src/maps.c.o: ../src/maps.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/project_name.dir/src/maps.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/maps.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c"
 
-CMakeFiles/project_name.dir/src/simple_snake.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/simple_snake.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c" > CMakeFiles/project_name.dir/src/simple_snake.c.i
+CMakeFiles/project_name.dir/src/maps.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/maps.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c" > CMakeFiles/project_name.dir/src/maps.c.i
 
-CMakeFiles/project_name.dir/src/simple_snake.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/simple_snake.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/simple_snake.c" -o CMakeFiles/project_name.dir/src/simple_snake.c.s
+CMakeFiles/project_name.dir/src/maps.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/maps.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c" -o CMakeFiles/project_name.dir/src/maps.c.s
+
+CMakeFiles/project_name.dir/src/physics.c.o: CMakeFiles/project_name.dir/flags.make
+CMakeFiles/project_name.dir/src/physics.c.o: ../src/physics.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/project_name.dir/src/physics.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/physics.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c"
+
+CMakeFiles/project_name.dir/src/physics.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/physics.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c" > CMakeFiles/project_name.dir/src/physics.c.i
+
+CMakeFiles/project_name.dir/src/physics.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/physics.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c" -o CMakeFiles/project_name.dir/src/physics.c.s
+
+CMakeFiles/project_name.dir/src/view.c.o: CMakeFiles/project_name.dir/flags.make
+CMakeFiles/project_name.dir/src/view.c.o: ../src/view.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/project_name.dir/src/view.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/project_name.dir/src/view.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c"
+
+CMakeFiles/project_name.dir/src/view.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project_name.dir/src/view.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c" > CMakeFiles/project_name.dir/src/view.c.i
+
+CMakeFiles/project_name.dir/src/view.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project_name.dir/src/view.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c" -o CMakeFiles/project_name.dir/src/view.c.s
 
 # Object files for target project_name
 project_name_OBJECTS = \
+"CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o" \
+"CMakeFiles/project_name.dir/src/logic.c.o" \
 "CMakeFiles/project_name.dir/src/main.c.o" \
-"CMakeFiles/project_name.dir/src/simple_snake.c.o"
+"CMakeFiles/project_name.dir/src/maps.c.o" \
+"CMakeFiles/project_name.dir/src/physics.c.o" \
+"CMakeFiles/project_name.dir/src/view.c.o"
 
 # External object files for target project_name
 project_name_EXTERNAL_OBJECTS =
 
-project_name.exe: CMakeFiles/project_name.dir/src/main.c.o
-project_name.exe: CMakeFiles/project_name.dir/src/simple_snake.c.o
-project_name.exe: CMakeFiles/project_name.dir/build.make
-project_name.exe: ../sdl2/sdl2-lib/libSDL2.a
-project_name.exe: ../sdl2/sdl2-lib/libSDL2main.a
-project_name.exe: ../sdl2/sdl2-gfx-lib/libsdl-gfx.a
-project_name.exe: CMakeFiles/project_name.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable project_name.exe"
+project_name: CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o
+project_name: CMakeFiles/project_name.dir/src/logic.c.o
+project_name: CMakeFiles/project_name.dir/src/main.c.o
+project_name: CMakeFiles/project_name.dir/src/maps.c.o
+project_name: CMakeFiles/project_name.dir/src/physics.c.o
+project_name: CMakeFiles/project_name.dir/src/view.c.o
+project_name: CMakeFiles/project_name.dir/build.make
+project_name: CMakeFiles/project_name.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable project_name"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project_name.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/project_name.dir/build: project_name.exe
+CMakeFiles/project_name.dir/build: project_name
 
 .PHONY : CMakeFiles/project_name.dir/build
 
@@ -111,6 +168,6 @@ CMakeFiles/project_name.dir/clean:
 .PHONY : CMakeFiles/project_name.dir/clean
 
 CMakeFiles/project_name.dir/depend:
-	cd "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug" "/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug" "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles/project_name.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/project_name.dir/depend
 

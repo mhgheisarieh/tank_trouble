@@ -36,12 +36,6 @@ bool CanXPlus (Map* map , Tank* tank){
             && tank->y - map->wall[i].Ry1 >= -TankRadius )
                 can = 0;
         }
-        if (    map->wall[i].Rx1 == map ->wall[i].Rx2
-                &&  map->wall[i].Ry1 - 2 < tank->PipeY
-                &&  tank->PipeY < map->wall[i].Ry2 + 2
-                &&  tank->PipeX  < map->wall[i].Rx1
-                &&  map->wall[i].Rx1 - tank->PipeX < 10)
-                can =0;
     }
     return can;
 }
@@ -63,12 +57,6 @@ bool CanXMinus (Map* map , Tank* tank){
                 && tank->y - map->wall[i].Ry1 >= -TankRadius)
                     can = 0;
         }
-        if (    map->wall[i].Rx1 == map ->wall[i].Rx2
-                &&  map->wall[i].Ry1 - 2 < tank->PipeY
-                &&  tank->PipeY < map->wall[i].Ry2 + 2
-                &&  tank->PipeX  > map->wall[i].Rx1
-                &&  tank->PipeX - map->wall[i].Rx1 < 10)
-            can =0;
     }
     return can;
 }
@@ -90,12 +78,6 @@ bool CanYPlus (Map* map , Tank* tank){
                 && tank->x - map->wall[i].Rx1 >= -TankRadius )
                 can = 0;
         }
-        if (    map->wall[i].Ry1 == map ->wall[i].Ry2
-                &&  map->wall[i].Rx1 - 2 < tank->PipeX
-                &&  tank->PipeX < map->wall[i].Rx2 + 2
-                &&  tank->PipeY < map->wall[i].Ry1
-                &&  map->wall[i].Ry1 - tank->PipeY < 10)
-            can =0;
     }
     return can;
 }
@@ -118,12 +100,6 @@ bool CanYMinus (Map* map , Tank* tank){
                 && tank->x - map->wall[i].Rx1 >= -TankRadius )
                 can = 0;
         }
-        if (    map->wall[i].Ry1 == map ->wall[i].Ry2
-                &&  map->wall[i].Rx1 - 2 < tank->PipeX
-                &&  tank->PipeX < map->wall[i].Rx2 + 2
-                &&  tank->PipeY  > map->wall[i].Ry1
-                &&  tank->PipeY - map->wall[i].Ry1 < 10)
-            can =0;
     }
     return can;
 }
@@ -145,10 +121,10 @@ bool CanDegMinus (Map* map , Tank* tank) {
 bool IsDotInWall (Map* map , int x , int y){
     bool IsDotInWall = 0;
     for (int i=0 ; i <map->NumOfWalls ; i++){
-        if (    (x < ( map->wall[i].Rx2 + 5))
-            &&  (x > ( map->wall[i].Rx1 - 5))
-            &&  (y < ( map->wall[i].Ry2 + 5))
-            &&  (y > ( map->wall[i].Ry1 - 5))) {
+        if (    (x < ( map->wall[i].Rx2 + 6))
+            &&  (x > ( map->wall[i].Rx1 - 6))
+            &&  (y < ( map->wall[i].Ry2 + 6))
+            &&  (y > ( map->wall[i].Ry1 - 6))) {
             IsDotInWall = 1;
             break;
         }

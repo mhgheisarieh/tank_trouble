@@ -36,9 +36,9 @@ void LoadMap (Map* map){
     }
     fclose(fp);
     for (int i=0; i<map->NumOfWalls; i++){
-        map->wall[i].Rx1 = 25.0 + 750.0 * map->wall[i].x1 / map->x;
-        map->wall[i].Rx2 = 25.0 + 750.0 * map->wall[i].x2 / map->x;
-        map->wall[i].Ry1 = 25.0 + 750.0 * map->wall[i].y1 / map->y;
-        map->wall[i].Ry2 = 25.0 + 750.0 * map->wall[i].y2 / map->y;
+        map->wall[i].Rx1 = 25.0 + 950.0 * map->wall[i].x1 / map->x;
+        map->wall[i].Rx2 = 25.0 + 950.0 * map->wall[i].x2 / map->x;
+        map->wall[i].Ry1 = 25.0 + 950.0 * map->wall[i].y1 / map->y;
+        map->wall[i].Ry2 = 25.0 + 950.0 * map->wall[i].y2 / map->y;
     }
 }

@@ -49,7 +49,7 @@ int handleEvents(Map* map) {
     for (int i=0; i<NumOfTank; i++){
         for (int j=0; j<NumOfBulls; j++)
             if (map->tank[i].bullet[j].Exist)
-                move_bullet(&map->tank[i].bullet[j]);
+                move_bullet(&map->tank[i].bullet[j] , map);
     }
 }
 
@@ -61,9 +61,9 @@ void DrawMap (SDL_Renderer* renderer ,Map* map){
 
 void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
     for (int i = 0; i < NumOfTank; i++) {
-        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
-        filledCircleRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->radius / 1.5, 0, 0, 0, 150);
-        thickLineRGBA(renderer, (tank+i)->x, (tank+i)->y, (tank+i)->x + (PipeLength * cosf((tank+i)->deg)), (tank+i)->y +(PipeLength * sinf((tank+i)->deg)), (tank+i)->radius / 4, 50,50, 50, 200);
+        filledCircleRGBA(renderer, (Sint16) (tank+i)->x,(Sint16) (tank+i)->y,(Sint16) (tank+i)->radius, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
+        filledCircleRGBA(renderer, (Sint16) (tank+i)->x,(Sint16) (tank+i)->y,(Sint16) ((tank+i)->radius / 2), 0, 0, 0, 250);
+        thickLineRGBA(renderer,(Sint16) ((tank+i)->x + (PipeLength * cosf((float)(tank+i)->deg)) / 1.8), (Sint16)((tank+i)->y +(PipeLength * sinf((float)(tank+i)->deg)) / 1.8), (Sint16)((tank+i)->x + (PipeLength * cosf((float)(tank+i)->deg))), (Sint16)((tank+i)->y +(PipeLength * sinf((float)(tank+i)->deg))), (Uint8)((tank+i)->radius / 4), 50,50, 50, 200);
     }
 }
 

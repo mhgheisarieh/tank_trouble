@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I"/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/sdl2/sdl2-include" -I"/cygdrive/d/Sharif University - Computer Engineering/Term 1/Programming Basics/project/sdl2/sdl2-gfx-include" 
+C_INCLUDES = -I/usr/include/SDL2 
 

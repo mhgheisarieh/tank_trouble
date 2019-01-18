@@ -12,30 +12,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa082690-dce9-4bc4-a319-cfc562c78ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.0/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/logic.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/logic.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/maps.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/maps.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/physics.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/physics.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/physics.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/view.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/src/view.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/src/simple_snake.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/src/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project_name.dir/src/simple_snake.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/simple_snake.c.dir/src/view.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libmain.c.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libmain.c.dll.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/main.c.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/main.c.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/main.c.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/main.c.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/main.c.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/main.c.exe.stackdump" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/maps/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/maps/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/maps/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/maps/3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/project_name.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/project_name.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DefinitionOfTanks.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/DefinitionOfTanks.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DefinitionOfTanks.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/DefinitionOfTanks.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/maps.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/maps.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/maps.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/maps.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/physics.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/physics.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/struct.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/struct.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/view.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/view.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,16 +110,42 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="main.c" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/physics.c">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+            <state relative-caret-position="152">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#24#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,20 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DefinitionOfTanks.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
+            <state relative-caret-position="54">
               <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="64" column="99" selection-start-line="64" selection-start-column="99" selection-end-line="64" selection-end-column="99" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -86,20 +166,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/maps.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/physics.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants.h">
+        <entry file="file://$PROJECT_DIR$/src/physics.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="190">
+              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -107,53 +202,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/struct.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="35" column="78" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
-              <folding>
-                <element signature="e#49#65#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DefinitionOfTanks.h">
+        <entry file="file://$PROJECT_DIR$/src/constants.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="171">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="147" selection-start-line="147" selection-end-line="147" />
             </state>
           </provider>
         </entry>
@@ -166,6 +234,7 @@
       <find>simple_snake</find>
       <find>12345</find>
       <find>deg</find>
+      <find>IsDotInWall</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,30 +245,31 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/cmake_win.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/simple_snake.c" />
         <option value="E:/Downloads/Compressed/97106238-master/old/src/struct.h" />
         <option value="E:/Downloads/Compressed/97106238-master/old/src/main.c" />
         <option value="$PROJECT_DIR$/src/maps.h" />
         <option value="$PROJECT_DIR$/src/view.h" />
         <option value="$PROJECT_DIR$/src/DefinitionOfTanks.h" />
-        <option value="$PROJECT_DIR$/src/maps.c" />
-        <option value="$PROJECT_DIR$/src/physics.h" />
-        <option value="$PROJECT_DIR$/src/struct.h" />
-        <option value="$PROJECT_DIR$/src/physics.c" />
         <option value="$PROJECT_DIR$/src/DefinitionOfTanks.c" />
         <option value="$PROJECT_DIR$/src/logic.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/maps.c" />
+        <option value="$PROJECT_DIR$/src/logic.c" />
         <option value="$PROJECT_DIR$/src/main.c" />
         <option value="$PROJECT_DIR$/src/constants.h" />
+        <option value="$PROJECT_DIR$/src/struct.h" />
         <option value="$PROJECT_DIR$/src/view.c" />
-        <option value="$PROJECT_DIR$/src/logic.c" />
+        <option value="$PROJECT_DIR$/src/physics.h" />
+        <option value="$PROJECT_DIR$/src/physics.c" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="335" />
-    <option name="width" value="1590" />
+    <option name="x" value="642" />
+    <option name="y" value="-17" />
+    <option name="width" value="980" />
     <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -221,17 +291,6 @@
             <path>
               <item name="main.c" type="b2602c69:ProjectViewProjectNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="main.c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-              <item name="maps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="main.c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="sdl2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -248,19 +307,19 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercises/Exercise 7/Exercise 7-3/Exercise 7-3.c" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercises/Exercise 7/Exercise 7-3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="cmake --build" />
       <command value="git" />
       <command value="git add -A" />
       <command value="git log" />
       <command value="git commit" />
+      <command value="cmake --build" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -281,6 +340,10 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",KIND" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -317,6 +380,12 @@
       <workItem from="1546195079363" duration="10469000" />
       <workItem from="1546244564878" duration="7256000" />
       <workItem from="1546284253280" duration="21426000" />
+      <workItem from="1546441691756" duration="952000" />
+      <workItem from="1546471989567" duration="1317000" />
+      <workItem from="1546537733914" duration="2670000" />
+      <workItem from="1546695271123" duration="40000" />
+      <workItem from="1547732352873" duration="4552000" />
+      <workItem from="1547740196651" duration="25736000" />
     </task>
     <task id="LOCAL-00001" summary="The tank is firing, but there are deficiencies in controlling the number of shots">
       <created>1545343488391</created>
@@ -329,7 +398,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198738000" />
+    <option name="totallyTimeSpent" value="234005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -341,46 +410,47 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1590604" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.16917084" />
+      <window_info id="Structure" order="1" sideWeight="0.500821" side_tool="true" visible="true" weight="0.16917084" />
+      <window_info id="Favorites" order="2" sideWeight="0.50083196" side_tool="true" weight="0.16917084" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.31342283" weight="0.32918397" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4919463" weight="0.3250346" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.3010573" visible="true" weight="0.32781458" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4919463" weight="0.3366446" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49798658" weight="0.32780084" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.31006712" weight="0.2295989" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.29731545" weight="0.22847682" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6865772" side_tool="true" visible="true" weight="0.2295989" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.69894266" side_tool="true" weight="0.32781458" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32960895" />
-      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4986577" weight="0.31424582" />
+      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4986577" weight="0.31317493" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3301939" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14648438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45637584" weight="0.3275463" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49798658" visible="true" weight="0.3287037" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.30134228" weight="0.32829374" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4919463" visible="true" weight="0.325" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49798658" weight="0.32780084" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.45033556" weight="0.23148148" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.29731545" weight="0.22870371" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32960895" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.54966444" side_tool="true" weight="0.23463687" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6986577" side_tool="true" weight="0.22894168" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32960895" />
-      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4986577" weight="0.31424582" />
+      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4986577" weight="0.31317493" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -405,13 +475,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exercise 7-3.c" />
-    <entry file="file://C:/cygwin64/usr/src/debug/cygwin-2.11.2-1/winsup/cygwin/lib/libcmain.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/cygwin64/usr/src/debug/cygwin-2.11.2-1/winsup/cygwin/lib/libcmain.c" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -426,30 +490,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/struct.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="32" column="11" selection-start-line="32" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/view.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/physics.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/struct.h" />
+    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/view.c" />
+    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/physics.c" />
     <entry file="file://$PROJECT_DIR$/sdl2/sdl2-include/SDL_video.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -465,42 +508,10 @@
         <state relative-caret-position="-1778" />
       </provider>
     </entry>
-    <entry file="file://D:/Telegram/Telegram Desktop/a (2).c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="24" lean-forward="true" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/cygwin64/usr/src/debug/cygwin-2.11.2-1/winsup/cygwin/fhandler_console.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45781">
-          <caret line="2711" selection-start-line="2711" selection-end-line="2711" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Telegram/Telegram Desktop/a (2).c" />
+    <entry file="file://C:/cygwin64/usr/src/debug/cygwin-2.11.2-1/winsup/cygwin/fhandler_console.cc" />
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="e#46#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/maps.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -509,105 +520,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/cygwin64/usr/src/debug/cygwin-2.11.2-1/winsup/cygwin/cygtls.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="68" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/cygwin64/usr/src/debug/cygwin-2.11.2-1/winsup/cygwin/cygtls.cc" />
+    <entry file="file://E:/Downloads/Compressed/97106238-master/old/src/main.c" />
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/maps/4.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/struct.h">
+    <entry file="file://$PROJECT_DIR$/src/logic.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="35" column="78" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
-          <folding>
-            <element signature="e#49#65#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DefinitionOfTanks.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="e#46#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake_linux.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
+          <caret selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        <state relative-caret-position="301">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/maps.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DefinitionOfTanks.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
+        <state relative-caret-position="54">
           <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="64" column="99" selection-start-line="64" selection-start-column="99" selection-end-line="64" selection-end-column="99" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -616,11 +581,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="432">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/maps.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/struct.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
         </state>
       </provider>
     </entry>
