@@ -4,11 +4,11 @@
 #include <math.h>
 #include <time.h>
 
-#include "newgame.h"
+#include "newround.h"
 #include "logic.h"
 #include "maps.h"
 
-void NewGame (Map* map){
+void NewRound(Map *map){
     LoadMap (map);
     Definition(map);
 }
@@ -50,7 +50,7 @@ void Definition(Map* map){
     map->tank[0].Up_key =SDLK_UP;
     map->tank[0].Left_Key =SDLK_LEFT;
     map->tank[0].Right_Key =SDLK_RIGHT;
-    map->tank[0].Shoot_Key = SDLK_m;
+    map->tank[0].Shoot_Key = SDLK_SLASH;
     map->tank[0].Key.Right_Key = 0;
     map->tank[0].Key.Up_key = 0;
     map->tank[0].Key.Left_Key = 0;
@@ -109,6 +109,53 @@ void Definition(Map* map){
     map->tank[1].IsAlive = 1;
     map->tank[1].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[1].bullet[i].Exist = 0;}
+
+    if (map->NumOfTanks == 2)
+        return;
+    SetXYOfTank (&map->tank[2] , map);
+    map->tank[2].radius = TankRadius;
+    map->tank[2].BodyColor.r = 25;
+    map->tank[2].BodyColor.g = 230;
+    map->tank[2].BodyColor.b = 100;
+    map->tank[2].BodyColor.a = 210;
+    map->tank[2].InnerColor.r = 0;
+    map->tank[2].InnerColor.g = 0;
+    map->tank[2].InnerColor.b = 0;
+    map->tank[2].InnerColor.a = 250;
+    map->tank[2].PipeColor.r = 50;
+    map->tank[2].PipeColor.g = 50;
+    map->tank[2].PipeColor.b = 50;
+    map->tank[2].PipeColor.a = 200;
+    map->tank[2].ConstBodyColor.r = 25;
+    map->tank[2].ConstBodyColor.g = 230;
+    map->tank[2].ConstBodyColor.b = 100;
+    map->tank[2].ConstBodyColor.a = 210;
+    map->tank[2].ConstInnerColor.r = 0;
+    map->tank[2].ConstInnerColor.g = 0;
+    map->tank[2].ConstInnerColor.b = 0;
+    map->tank[2].ConstInnerColor.a = 250;
+    map->tank[2].ConstPipeColor.r = 50;
+    map->tank[2].ConstPipeColor.g = 50;
+    map->tank[2].ConstPipeColor.b = 50;
+    map->tank[2].ConstPipeColor.a = 200;
+    map->tank[2].Down_key =SDLK_j;
+    map->tank[2].Up_key =SDLK_u;
+    map->tank[2].Left_Key =SDLK_h;
+    map->tank[2].Right_Key =SDLK_k;
+    map->tank[2].Shoot_Key = SDLK_g;
+    map->tank[2].Key.Right_Key = 0;
+    map->tank[2].Key.Up_key = 0;
+    map->tank[2].Key.Left_Key = 0;
+    map->tank[2].Key.Down_key = 0;
+    map->tank[2].CanXPlus = 1;
+    map->tank[2].CanYPlus = 1;
+    map->tank[2].CanXMinus = 1;
+    map->tank[2].CanYMinus = 1;
+    map->tank[2].NumOFExitBulls = 0;
+    map->tank[2].TimeOfLoss = SDL_GetTicks();
+    map->tank[2].IsAlive = 1;
+    map->tank[2].canshoot =1;
+    for (int i=0; i<NumOfBulls; i++){map->tank[2].bullet[i].Exist = 0;}
 }
 
 int random_number(int min_num, int max_num){

@@ -43,11 +43,16 @@ typedef struct {
 } Tank;
 
 typedef struct {
+    int NumOfTanks;
     int x , y , NumOfWalls;
     Wall wall[MaxNumOfWalls];
-    Tank tank [NumOfTank];
+    Tank tank [3];
     int DeathTime;
     bool IsAlive;
 } Map;
+typedef struct {
+    int x;
+    int y1, y2;
 
+} Button;
 #endif

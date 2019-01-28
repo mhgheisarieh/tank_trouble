@@ -9,7 +9,7 @@
 #include "logic.h"
 
 void Physics (Map* map){
-    for (int i=0 ; i<NumOfTank; i++){
+    for (int i=0 ; i<map->NumOfTanks; i++){
         moveTank(&map->tank[i]);
         turnTank(&map->tank[i]);
         for (int j=0; j<NumOfBulls; j++)

@@ -5,12 +5,11 @@
 #include <SDL.h>
 #include <SDL2_gfxPrimitives.h>
 #include "struct.h"
-#include "newgame.h"
+#include "newround.h"
 
 void LossOfTank (Tank* tank , Bullet* bullet){
     bullet->Exist = 0;
     tank->IsAlive = 0;
-    tank->TimeOfLoss = SDL_GetTicks();
     tank->PipeColor.r = 255;
     tank->PipeColor.g = 255;
     tank->PipeColor.b = 255;
@@ -26,8 +25,8 @@ void LossOfTank (Tank* tank , Bullet* bullet){
 }
 
 void CheckBullets (Map* map){
-    for (int i=0; i<NumOfTank ; i++){
-        for (int j=0; j<NumOfTank ; j++){
+    for (int i=0; i<map->NumOfTanks ; i++){
+        for (int j=0; j<map->NumOfTanks ; j++){
             for (int k=0; k<NumOfBulls; k++){
                 double distance = sqrt ((map->tank[i].x - map->tank[j].bullet[k].x) * (map->tank[i].x - map->tank[j].bullet[k].x)
                                         + (map->tank[i].y - map->tank[j].bullet[k].y) * (map->tank[i].y - map->tank[j].bullet[k].y));
@@ -42,7 +41,7 @@ void CheckBullets (Map* map){
 void CheckGame(Map* map){
     CheckBullets(map);
     int NumOfAliveTanks = 0;
-    for (int i=0; i<NumOfTank; i++){
+    for (int i=0; i<map->NumOfTanks; i++){
         if (map->tank[i].IsAlive) NumOfAliveTanks++;
     }
     if (map->IsAlive && NumOfAliveTanks == 1){
@@ -50,10 +49,10 @@ void CheckGame(Map* map){
         map->DeathTime = SDL_GetTicks();
     }
     if (SDL_GetTicks()-map->DeathTime > TimeOfBetweenGames && !map->IsAlive){
-        for (int i=0; i<NumOfTank; i++){
+        for (int i=0; i<map->NumOfTanks; i++){
             if (map->tank[i].IsAlive)
                  map->tank[i].Score ++;
         }
-        NewGame(map);
+        NewRound(map);
     }
 }

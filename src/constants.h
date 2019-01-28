@@ -4,7 +4,6 @@
 
 #define Exit 1000
 #define Step 5
-#define NumOfTank 2
 #define NumOfBulls 5
 #define DegStep 0.15
 #define BullStep 8
@@ -13,6 +12,6 @@
 #define FPS 50
 #define TankRadius 30
 #define PipeLength 31
-#define TimeOfBetweenGames 2000
+#define TimeOfBetweenGames 3000
 
 #endif //MAIN_C_CONSTANTS_H

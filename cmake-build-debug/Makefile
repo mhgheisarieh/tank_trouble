@@ -258,32 +258,32 @@ src/maps.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/maps.c.s
 .PHONY : src/maps.c.s
 
-src/newgame.o: src/newgame.c.o
+src/newround.o: src/newround.c.o
 
-.PHONY : src/newgame.o
+.PHONY : src/newround.o
 
 # target to build an object file
-src/newgame.c.o:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newgame.c.o
-.PHONY : src/newgame.c.o
+src/newround.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newround.c.o
+.PHONY : src/newround.c.o
 
-src/newgame.i: src/newgame.c.i
+src/newround.i: src/newround.c.i
 
-.PHONY : src/newgame.i
+.PHONY : src/newround.i
 
 # target to preprocess a source file
-src/newgame.c.i:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newgame.c.i
-.PHONY : src/newgame.c.i
+src/newround.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newround.c.i
+.PHONY : src/newround.c.i
 
-src/newgame.s: src/newgame.c.s
+src/newround.s: src/newround.c.s
 
-.PHONY : src/newgame.s
+.PHONY : src/newround.s
 
 # target to generate assembly for a file
-src/newgame.c.s:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newgame.c.s
-.PHONY : src/newgame.c.s
+src/newround.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newround.c.s
+.PHONY : src/newround.c.s
 
 src/physics.o: src/physics.c.o
 
@@ -311,6 +311,33 @@ src/physics.s: src/physics.c.s
 src/physics.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/physics.c.s
 .PHONY : src/physics.c.s
+
+src/startofgame.o: src/startofgame.c.o
+
+.PHONY : src/startofgame.o
+
+# target to build an object file
+src/startofgame.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/startofgame.c.o
+.PHONY : src/startofgame.c.o
+
+src/startofgame.i: src/startofgame.c.i
+
+.PHONY : src/startofgame.i
+
+# target to preprocess a source file
+src/startofgame.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/startofgame.c.i
+.PHONY : src/startofgame.c.i
+
+src/startofgame.s: src/startofgame.c.s
+
+.PHONY : src/startofgame.s
+
+# target to generate assembly for a file
+src/startofgame.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/startofgame.c.s
+.PHONY : src/startofgame.c.s
 
 src/view.o: src/view.c.o
 
@@ -363,12 +390,15 @@ help:
 	@echo "... src/maps.o"
 	@echo "... src/maps.i"
 	@echo "... src/maps.s"
-	@echo "... src/newgame.o"
-	@echo "... src/newgame.i"
-	@echo "... src/newgame.s"
+	@echo "... src/newround.o"
+	@echo "... src/newround.i"
+	@echo "... src/newround.s"
 	@echo "... src/physics.o"
 	@echo "... src/physics.i"
 	@echo "... src/physics.s"
+	@echo "... src/startofgame.o"
+	@echo "... src/startofgame.i"
+	@echo "... src/startofgame.s"
 	@echo "... src/view.o"
 	@echo "... src/view.i"
 	@echo "... src/view.s"

@@ -110,16 +110,22 @@
 		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h">
 			<Option target="main.c"/>
 		</Unit>
-		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newgame.c">
+		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.c">
 			<Option target="main.c"/>
 		</Unit>
-		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newgame.h">
+		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h">
 			<Option target="main.c"/>
 		</Unit>
 		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c">
 			<Option target="main.c"/>
 		</Unit>
 		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h">
+			<Option target="main.c"/>
+		</Unit>
+		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.c">
+			<Option target="main.c"/>
+		</Unit>
+		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.h">
 			<Option target="main.c"/>
 		</Unit>
 		<Unit filename="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h">

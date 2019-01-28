@@ -10,10 +10,10 @@
 #include "logic.h"
 
 void DrawMap (SDL_Renderer* renderer ,Map* map){
-    DrawTanks (renderer , map->tank);
-    DrawBullets (renderer, map->tank);
+    DrawTanks (renderer , map);
+    DrawBullets (renderer, map);
     DrawWalls (renderer, map->wall);
-    DrawScores (renderer, map->tank);
+    DrawScores (renderer, map);
 }
 
 void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
@@ -38,14 +38,14 @@ void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
                   (Uint8)(tank)->PipeColor.a);
 }
 
-void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
-    for (int i = 0; i < NumOfTank; i++) {
-        if ((tank+i)->IsAlive) continue;
-            DrawTank(renderer , (tank+i));
+void DrawTanks (SDL_Renderer* renderer , Map* map) {
+    for (int i = 0; i < map->NumOfTanks; i++) {
+        if (map->tank[i].IsAlive) continue;
+            DrawTank(renderer , &map->tank[i]);
     }
-    for (int i = 0; i < NumOfTank; i++) {
-        if (!(tank+i)->IsAlive) continue;
-        DrawTank(renderer , (tank+i));
+    for (int i = 0; i < map->NumOfTanks; i++) {
+        if (!map->tank[i].IsAlive) continue;
+        DrawTank(renderer , &map->tank[i]);
     }
 }
 
@@ -58,13 +58,13 @@ void DrawWalls (SDL_Renderer* renderer, Wall* wall){
     }
 }
 
-void DrawBullets (SDL_Renderer* renderer, Tank* tank){
-    for (int i = 0; i < NumOfTank; i++)
+void DrawBullets (SDL_Renderer* renderer, Map* map){
+    for (int i = 0; i < map->NumOfTanks; i++)
         for (int j = 0; j < NumOfBulls; j++)
-            if((tank + i)->bullet[j].Exist){
-                DrawBullet(renderer, &((tank+i)->bullet[j]));
-                if (!IsAliveBullet (&((tank+i)->bullet[j]))){
-                    (tank+i)->NumOFExitBulls --;
+            if(map->tank[i].bullet[j].Exist){
+                DrawBullet(renderer, &map->tank[i].bullet[j]);
+                if (!IsAliveBullet (&map->tank[i].bullet[j])){
+                    map->tank[i].NumOFExitBulls --;
                 }
             }
 }
@@ -73,26 +73,26 @@ void DrawBullet (SDL_Renderer* renderer, Bullet* bullet){
     filledCircleRGBA(renderer, (Sint16) bullet->x,  (Sint16) bullet->y, 3, 0, 0, 0, 255);
 }
 
-void DrawScores (SDL_Renderer* renderer, Tank* tank){
-    for (int i=0; i<NumOfTank; i++){
-        int y = (1000 / (2 * NumOfTank + 2)) * (2 * i + 2);
+void DrawScores (SDL_Renderer* renderer, Map* map){
+    for (int i=0; i< map->NumOfTanks; i++){
+        int y = (1000 / (2 * map->NumOfTanks + 2)) * (2 * i + 2);
         filledCircleRGBA(renderer, 1100, (Sint16) y , 40,
-                (Uint8)(tank+i)->ConstBodyColor.r,
-                (Uint8)(tank+i)->ConstBodyColor.g,
-                (Uint8)(tank+i)->ConstBodyColor.b,
-                (Uint8)(tank+i)->ConstBodyColor.a);
+                (Uint8) map->tank[i].ConstBodyColor.r,
+                (Uint8) map->tank[i].ConstBodyColor.g,
+                (Uint8) map->tank[i].ConstBodyColor.b,
+                (Uint8) map->tank[i].ConstBodyColor.a);
         filledCircleRGBA(renderer, 1100, (Sint16) y, 20,
-                (Uint8)(tank+i)->ConstInnerColor.r,
-                (Uint8)(tank+i)->ConstInnerColor.g,
-                (Uint8)(tank+i)->ConstInnerColor.b,
-                (Uint8)(tank+i)->ConstInnerColor.a);
+                (Uint8) map->tank[i].ConstInnerColor.r,
+                (Uint8) map->tank[i].ConstInnerColor.g,
+                (Uint8) map->tank[i].ConstInnerColor.b,
+                (Uint8) map->tank[i].ConstInnerColor.a);
         thickLineRGBA(renderer, 1100 , (Sint16)(y + 25) , 1100 , (Sint16)(y +50) , 10 ,
-                (Uint8)(tank+i)->ConstPipeColor.r,
-                (Uint8)(tank+i)->ConstPipeColor.g,
-                (Uint8)(tank+i)->ConstPipeColor.b,
-                (Uint8)(tank+i)->ConstPipeColor.a);
+                (Uint8) map->tank[i].ConstPipeColor.r,
+                (Uint8) map->tank[i].ConstPipeColor.g,
+                (Uint8) map->tank[i].ConstPipeColor.b,
+                (Uint8) map->tank[i].ConstPipeColor.a);
         char ScoreString [20] = "Score: ";
-        sprintf(ScoreString + 7 , "%d" , (tank+i)->Score);
+        sprintf(ScoreString + 7 , "%d" , map->tank[i].Score);
         int n = (int) strlen(ScoreString);
         SDL_RenderSetScale(renderer , 2 ,2);
         stringRGBA(renderer , (Sint16)((1100 - n * 8)/2)  , (Sint16) ((y + 70)/2) ,  ScoreString , 0 , 0 , 0 ,255);
@@ -104,12 +104,4 @@ void Quit (SDL_Renderer* renderer ,  SDL_Window* window){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
-}
-
-bool IsAliveBullet (Bullet* bullet){
-    if ((SDL_GetTicks()-(bullet->TimeAppear))>TimeOfBull) {
-        bullet->Exist = 0;
-        return 0;
-    }
-    return 1;
 }

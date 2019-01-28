@@ -9,7 +9,7 @@
 #include "physics.h"
 
 void Logics (Map* map){
-    for (int i=0 ; i<NumOfTank; i++){
+    for (int i=0 ; i<map->NumOfTanks; i++){
         map->tank[i].CanXPlus = CanXPlus (map , &map->tank[i]);
         map->tank[i].CanXMinus = CanXMinus (map , &map->tank[i]);
         map->tank[i].CanYPlus = CanYPlus (map , &map->tank[i]);
@@ -114,4 +114,12 @@ bool IsTankInWall (Map* map , Tank* tank){
         }
     }
     return IsInWall;
+}
+
+bool IsAliveBullet (Bullet* bullet){
+    if ((SDL_GetTicks()-(bullet->TimeAppear))>TimeOfBull) {
+        bullet->Exist = 0;
+        return 0;
+    }
+    return 1;
 }

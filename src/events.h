@@ -5,5 +5,6 @@
 #include "struct.h"
 
 int handleEvents(Map* map);
+int handleEventsOfFirstMenu ();
 
 #endif //MAIN_C_EVENTS_H

@@ -12,7 +12,7 @@
 int handleEvents(Map* map) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
-        for (int i=0; i<NumOfTank; i++){
+        for (int i=0; i<map->NumOfTanks; i++){
             if (event.type == SDL_KEYDOWN) {
                 if (event.key.keysym.sym == map->tank[i].Down_key)
                     map->tank[i].Key.Down_key = 1;
@@ -44,6 +44,14 @@ int handleEvents(Map* map) {
                 }
             }
         }
+        if (event.window.event==SDL_WINDOWEVENT_CLOSE)
+            return Exit;
+    }
+}
+
+int handleEventsOfFirstMenu (){
+    SDL_Event event;
+    while (SDL_PollEvent(&event)){
         if (event.window.event==SDL_WINDOWEVENT_CLOSE)
             return Exit;
     }

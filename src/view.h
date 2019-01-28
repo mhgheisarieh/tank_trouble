@@ -6,12 +6,11 @@
 #include <stdbool.h>
 
 void DrawTank  (SDL_Renderer* renderer , Tank* tank);
-void DrawTanks (SDL_Renderer* renderer ,Tank* tank);
-void DrawBullets (SDL_Renderer* renderer, Tank* tank);
+void DrawTanks (SDL_Renderer* renderer ,Map* map);
+void DrawBullets (SDL_Renderer* renderer, Map* map);
 void DrawWalls (SDL_Renderer* renderer, Wall* wall);
 void DrawBullet (SDL_Renderer* renderer, Bullet* bullet);
-void DrawScores (SDL_Renderer*, Tank* tank);
-bool IsAliveBullet (Bullet* bullet);
+void DrawScores (SDL_Renderer*, Map* map);
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window);
 void DrawMap (SDL_Renderer* renderer ,Map* map);
 
