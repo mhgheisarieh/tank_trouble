@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/project_name.dir/src/DefinitionOfTanks.c.o CMakeFiles/project_name.dir/src/logic.c.o CMakeFiles/project_name.dir/src/main.c.o CMakeFiles/project_name.dir/src/maps.c.o CMakeFiles/project_name.dir/src/physics.c.o CMakeFiles/project_name.dir/src/view.c.o  -o project_name -lm -lSDL2 -lSDL2_gfx 

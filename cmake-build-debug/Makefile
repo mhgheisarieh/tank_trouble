@@ -123,32 +123,32 @@ main.c/fast:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
 .PHONY : main.c/fast
 
-src/DefinitionOfTanks.o: src/DefinitionOfTanks.c.o
+src/events.o: src/events.c.o
 
-.PHONY : src/DefinitionOfTanks.o
+.PHONY : src/events.o
 
 # target to build an object file
-src/DefinitionOfTanks.c.o:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.o
-.PHONY : src/DefinitionOfTanks.c.o
+src/events.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/events.c.o
+.PHONY : src/events.c.o
 
-src/DefinitionOfTanks.i: src/DefinitionOfTanks.c.i
+src/events.i: src/events.c.i
 
-.PHONY : src/DefinitionOfTanks.i
+.PHONY : src/events.i
 
 # target to preprocess a source file
-src/DefinitionOfTanks.c.i:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.i
-.PHONY : src/DefinitionOfTanks.c.i
+src/events.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/events.c.i
+.PHONY : src/events.c.i
 
-src/DefinitionOfTanks.s: src/DefinitionOfTanks.c.s
+src/events.s: src/events.c.s
 
-.PHONY : src/DefinitionOfTanks.s
+.PHONY : src/events.s
 
 # target to generate assembly for a file
-src/DefinitionOfTanks.c.s:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/DefinitionOfTanks.c.s
-.PHONY : src/DefinitionOfTanks.c.s
+src/events.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/events.c.s
+.PHONY : src/events.c.s
 
 src/logic.o: src/logic.c.o
 
@@ -204,6 +204,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/managment.o: src/managment.c.o
+
+.PHONY : src/managment.o
+
+# target to build an object file
+src/managment.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/managment.c.o
+.PHONY : src/managment.c.o
+
+src/managment.i: src/managment.c.i
+
+.PHONY : src/managment.i
+
+# target to preprocess a source file
+src/managment.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/managment.c.i
+.PHONY : src/managment.c.i
+
+src/managment.s: src/managment.c.s
+
+.PHONY : src/managment.s
+
+# target to generate assembly for a file
+src/managment.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/managment.c.s
+.PHONY : src/managment.c.s
+
 src/maps.o: src/maps.c.o
 
 .PHONY : src/maps.o
@@ -230,6 +257,33 @@ src/maps.s: src/maps.c.s
 src/maps.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/maps.c.s
 .PHONY : src/maps.c.s
+
+src/newgame.o: src/newgame.c.o
+
+.PHONY : src/newgame.o
+
+# target to build an object file
+src/newgame.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newgame.c.o
+.PHONY : src/newgame.c.o
+
+src/newgame.i: src/newgame.c.i
+
+.PHONY : src/newgame.i
+
+# target to preprocess a source file
+src/newgame.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newgame.c.i
+.PHONY : src/newgame.c.i
+
+src/newgame.s: src/newgame.c.s
+
+.PHONY : src/newgame.s
+
+# target to generate assembly for a file
+src/newgame.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/newgame.c.s
+.PHONY : src/newgame.c.s
 
 src/physics.o: src/physics.c.o
 
@@ -294,18 +348,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... main.c"
 	@echo "... edit_cache"
-	@echo "... src/DefinitionOfTanks.o"
-	@echo "... src/DefinitionOfTanks.i"
-	@echo "... src/DefinitionOfTanks.s"
+	@echo "... src/events.o"
+	@echo "... src/events.i"
+	@echo "... src/events.s"
 	@echo "... src/logic.o"
 	@echo "... src/logic.i"
 	@echo "... src/logic.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/managment.o"
+	@echo "... src/managment.i"
+	@echo "... src/managment.s"
 	@echo "... src/maps.o"
 	@echo "... src/maps.i"
 	@echo "... src/maps.s"
+	@echo "... src/newgame.o"
+	@echo "... src/newgame.i"
+	@echo "... src/newgame.s"
 	@echo "... src/physics.o"
 	@echo "... src/physics.i"
 	@echo "... src/physics.s"

@@ -7,15 +7,19 @@
 #include <SDL.h>
 #include <SDL2_gfxPrimitives.h>
 #include "view.h"
-#include "DefinitionOfTanks.h"
+#include "newgame.h"
 #include "maps.h"
 #include "physics.h"
 #include "logic.h"
+#include "events.h"
+#include "managment.h"
 
-int main(int argc , char* argv[]){
+int main(){
     Map map;
-    LoadMap (&map);
-    Definition(&map);
+    for (int i=0; i<NumOfTank; i++) {
+        map.tank[i].Score = 0;
+    }
+    NewGame (&map);
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window* window = SDL_CreateWindow("Alter Tank", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1200, 1000, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -30,10 +34,8 @@ int main(int argc , char* argv[]){
         DrawMap(renderer , &map);
         SDL_RenderPresent(renderer);
         Logics(&map);
-        for (int i=0 ; i<NumOfTank; i++){
-            moveTank(&map.tank[i]);
-            turnTank(&map.tank[i]);
-        }
+        Physics(&map);
+        CheckGame(&map);
         while (SDL_GetTicks() - start_ticks < 1000 / FPS);
     }
 }

@@ -9,5 +9,6 @@ void fire(Tank* tank);
 void move_bullet(Bullet* bullet , Map* map);
 int IsPlus(double i);
 void TMPMoveBullet (Bullet* bullet);
+void Physics (Map* map);
 
 #endif //MAIN_C_PHYSICS_H

@@ -4,19 +4,48 @@
 #include <math.h>
 #include <time.h>
 
-#include "DefinitionOfTanks.h"
+#include "newgame.h"
 #include "logic.h"
+#include "maps.h"
+
+void NewGame (Map* map){
+    LoadMap (map);
+    Definition(map);
+}
 
 void Definition(Map* map){
 
-    srand(time(NULL));
+    map->DeathTime = SDL_GetTicks();
+    map->IsAlive = 1;
+
+    srand((unsigned int)time(NULL));
 
     SetXYOfTank (&map->tank[0] , map);
     map->tank[0].radius = TankRadius;
-    map->tank[0].Color.r = 250;
-    map->tank[0].Color.g = 0;
-    map->tank[0].Color.b = 0;
-    map->tank[0].Color.a = 210;
+    map->tank[0].BodyColor.r = 250;
+    map->tank[0].BodyColor.g = 0;
+    map->tank[0].BodyColor.b = 0;
+    map->tank[0].BodyColor.a = 210;
+    map->tank[0].InnerColor.r = 0;
+    map->tank[0].InnerColor.g = 0;
+    map->tank[0].InnerColor.b = 0;
+    map->tank[0].InnerColor.a = 250;
+    map->tank[0].PipeColor.r = 50;
+    map->tank[0].PipeColor.g = 50;
+    map->tank[0].PipeColor.b = 50;
+    map->tank[0].PipeColor.a = 200;
+    map->tank[0].ConstBodyColor.r = 250;
+    map->tank[0].ConstBodyColor.g = 0;
+    map->tank[0].ConstBodyColor.b = 0;
+    map->tank[0].ConstBodyColor.a = 210;
+    map->tank[0].ConstInnerColor.r = 0;
+    map->tank[0].ConstInnerColor.g = 0;
+    map->tank[0].ConstInnerColor.b = 0;
+    map->tank[0].ConstInnerColor.a = 250;
+    map->tank[0].ConstPipeColor.r = 50;
+    map->tank[0].ConstPipeColor.g = 50;
+    map->tank[0].ConstPipeColor.b = 50;
+    map->tank[0].ConstPipeColor.a = 200;
     map->tank[0].Down_key =SDLK_DOWN;
     map->tank[0].Up_key =SDLK_UP;
     map->tank[0].Left_Key =SDLK_LEFT;
@@ -30,18 +59,38 @@ void Definition(Map* map){
     map->tank[0].CanYPlus = 1;
     map->tank[0].CanXMinus = 1;
     map->tank[0].CanYMinus = 1;
-    map->tank[0].CanDegPlus = 1;
-    map->tank[0].CanDegMinus = 1;
+    map->tank[0].TimeOfLoss = SDL_GetTicks();
+    map->tank[0].IsAlive = 1;
     map->tank[0].NumOFExitBulls = 0;
     map->tank[0].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[0].bullet[i].Exist = 0;}
 
     SetXYOfTank (&map->tank[1] , map);
     map->tank[1].radius = TankRadius;
-    map->tank[1].Color.r = 25;
-    map->tank[1].Color.g = 100;
-    map->tank[1].Color.b = 230;
-    map->tank[1].Color.a = 210;
+    map->tank[1].BodyColor.r = 25;
+    map->tank[1].BodyColor.g = 100;
+    map->tank[1].BodyColor.b = 230;
+    map->tank[1].BodyColor.a = 210;
+    map->tank[1].InnerColor.r = 0;
+    map->tank[1].InnerColor.g = 0;
+    map->tank[1].InnerColor.b = 0;
+    map->tank[1].InnerColor.a = 250;
+    map->tank[1].PipeColor.r = 50;
+    map->tank[1].PipeColor.g = 50;
+    map->tank[1].PipeColor.b = 50;
+    map->tank[1].PipeColor.a = 200;
+    map->tank[1].ConstBodyColor.r = 25;
+    map->tank[1].ConstBodyColor.g = 100;
+    map->tank[1].ConstBodyColor.b = 230;
+    map->tank[1].ConstBodyColor.a = 210;
+    map->tank[1].ConstInnerColor.r = 0;
+    map->tank[1].ConstInnerColor.g = 0;
+    map->tank[1].ConstInnerColor.b = 0;
+    map->tank[1].ConstInnerColor.a = 250;
+    map->tank[1].ConstPipeColor.r = 50;
+    map->tank[1].ConstPipeColor.g = 50;
+    map->tank[1].ConstPipeColor.b = 50;
+    map->tank[1].ConstPipeColor.a = 200;
     map->tank[1].Down_key =SDLK_d;
     map->tank[1].Up_key =SDLK_e;
     map->tank[1].Left_Key =SDLK_s;
@@ -55,9 +104,9 @@ void Definition(Map* map){
     map->tank[1].CanYPlus = 1;
     map->tank[1].CanXMinus = 1;
     map->tank[1].CanYMinus = 1;
-    map->tank[1].CanDegPlus = 1;
-    map->tank[1].CanDegMinus = 1;
     map->tank[1].NumOFExitBulls = 0;
+    map->tank[1].TimeOfLoss = SDL_GetTicks();
+    map->tank[1].IsAlive = 1;
     map->tank[1].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[1].bullet[i].Exist = 0;}
 }

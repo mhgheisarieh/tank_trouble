@@ -1,76 +1,59 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <stdlib.h>
 #include <math.h>
+#include <stdlib.h>
+#include <string.h>
 #include <SDL.h>
 #include <SDL2_gfxPrimitives.h>
 #include "view.h"
 #include "physics.h"
 #include "logic.h"
 
-int handleEvents(Map* map) {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-        for (int i=0; i<NumOfTank; i++){
-            if (event.type == SDL_KEYDOWN) {
-                if (event.key.keysym.sym == map->tank[i].Down_key)
-                    map->tank[i].Key.Down_key = 1;
-                if (event.key.keysym.sym == map->tank[i].Up_key)
-                    map->tank[i].Key.Up_key = 1;
-                if (event.key.keysym.sym == map->tank[i].Left_Key)
-                    map->tank[i].Key.Left_Key = 1;
-                if (event.key.keysym.sym == map->tank[i].Right_Key)
-                    map->tank[i].Key.Right_Key = 1;
-                if (event.key.keysym.sym == map->tank[i].Shoot_Key && map->tank[i].canshoot) {
-                    fire(&(map->tank[i]));
-                    map->tank[i].canshoot = false;
-                }
-            }
-            if (event.type == SDL_KEYUP) {
-                if (event.key.keysym.sym == map->tank[i].Down_key)
-                    map->tank[i].Key.Down_key = 0;
-                if (event.key.keysym.sym == map->tank[i].Up_key) {
-                    map->tank[i].Key.Up_key = 0;
-                }
-                if (event.key.keysym.sym == map->tank[i].Left_Key) {
-                    map->tank[i].Key.Left_Key = 0;
-                }
-                if (event.key.keysym.sym == map->tank[i].Right_Key) {
-                    map->tank[i].Key.Right_Key = 0;
-                }
-                if (event.key.keysym.sym == map->tank[i].Shoot_Key) {
-                    map->tank[i].canshoot = true;
-                }
-            }
-        }
-        if (event.window.event==SDL_WINDOWEVENT_CLOSE)
-            return Exit;
-    }
-    for (int i=0; i<NumOfTank; i++){
-        for (int j=0; j<NumOfBulls; j++)
-            if (map->tank[i].bullet[j].Exist)
-                move_bullet(&map->tank[i].bullet[j] , map);
-    }
-}
-
 void DrawMap (SDL_Renderer* renderer ,Map* map){
     DrawTanks (renderer , map->tank);
     DrawBullets (renderer, map->tank);
     DrawWalls (renderer, map->wall);
+    DrawScores (renderer, map->tank);
+}
+
+void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
+    filledCircleRGBA(renderer, (Sint16)(tank)->x,(Sint16)(tank)->y,(Sint16) (tank)->radius,
+                     (Uint8)(tank)->BodyColor.r,
+                     (Uint8)(tank)->BodyColor.g,
+                     (Uint8)(tank)->BodyColor.b,
+                     (Uint8)(tank)->BodyColor.a);
+    filledCircleRGBA(renderer, (Sint16)(tank)->x,(Sint16)(tank)->y,(Sint16) ((tank)->radius / 2),
+                     (Uint8)(tank)->InnerColor.r,
+                     (Uint8)(tank)->InnerColor.g,
+                     (Uint8)(tank)->InnerColor.b,
+                     (Uint8)(tank)->InnerColor.a);
+    thickLineRGBA(renderer,(Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg)) / 1.8),
+                  (Sint16)((tank)->y + (PipeLength * sinf((float)(tank)->deg)) / 1.8),
+                  (Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg))),
+                  (Sint16)((tank)->y +(PipeLength * sinf((float)(tank)->deg))),
+                  (Uint8)((tank)->radius / 4),
+                  (Uint8)(tank)->PipeColor.r,
+                  (Uint8)(tank)->PipeColor.g,
+                  (Uint8)(tank)->PipeColor.b,
+                  (Uint8)(tank)->PipeColor.a);
 }
 
 void DrawTanks (SDL_Renderer* renderer , Tank* tank) {
     for (int i = 0; i < NumOfTank; i++) {
-        filledCircleRGBA(renderer, (Sint16) (tank+i)->x,(Sint16) (tank+i)->y,(Sint16) (tank+i)->radius, (tank+i)->Color.r, (tank+i)->Color.g, (tank+i)->Color.b, (tank+i)->Color.a);
-        filledCircleRGBA(renderer, (Sint16) (tank+i)->x,(Sint16) (tank+i)->y,(Sint16) ((tank+i)->radius / 2), 0, 0, 0, 250);
-        thickLineRGBA(renderer,(Sint16) ((tank+i)->x + (PipeLength * cosf((float)(tank+i)->deg)) / 1.8), (Sint16)((tank+i)->y +(PipeLength * sinf((float)(tank+i)->deg)) / 1.8), (Sint16)((tank+i)->x + (PipeLength * cosf((float)(tank+i)->deg))), (Sint16)((tank+i)->y +(PipeLength * sinf((float)(tank+i)->deg))), (Uint8)((tank+i)->radius / 4), 50,50, 50, 200);
+        if ((tank+i)->IsAlive) continue;
+            DrawTank(renderer , (tank+i));
+    }
+    for (int i = 0; i < NumOfTank; i++) {
+        if (!(tank+i)->IsAlive) continue;
+        DrawTank(renderer , (tank+i));
     }
 }
 
 void DrawWalls (SDL_Renderer* renderer, Wall* wall){
     int i =0;
     while ((wall+i)->exist == 1){
-        thickLineRGBA(renderer, (wall+i)->Rx1 , (wall+i)->Ry1 , (wall+i)->Rx2 , (wall+i)->Ry2 , 3 , wall->Color.r , wall->Color.g , wall->Color.b , wall->Color.a);
+        thickLineRGBA(renderer,  (Sint16)(wall+i)->Rx1 ,  (Sint16)(wall+i)->Ry1 ,  (Sint16)(wall+i)->Rx2 ,  (Sint16)(wall+i)->Ry2 ,
+                       3 , wall->Color.r , wall->Color.g , wall->Color.b , wall->Color.a);
         i++;
     }
 }
@@ -87,7 +70,34 @@ void DrawBullets (SDL_Renderer* renderer, Tank* tank){
 }
 
 void DrawBullet (SDL_Renderer* renderer, Bullet* bullet){
-    filledCircleRGBA(renderer, bullet->x, bullet->y, 3, 0, 0, 0, 255);
+    filledCircleRGBA(renderer, (Sint16) bullet->x,  (Sint16) bullet->y, 3, 0, 0, 0, 255);
+}
+
+void DrawScores (SDL_Renderer* renderer, Tank* tank){
+    for (int i=0; i<NumOfTank; i++){
+        int y = (1000 / (2 * NumOfTank + 2)) * (2 * i + 2);
+        filledCircleRGBA(renderer, 1100, (Sint16) y , 40,
+                (Uint8)(tank+i)->ConstBodyColor.r,
+                (Uint8)(tank+i)->ConstBodyColor.g,
+                (Uint8)(tank+i)->ConstBodyColor.b,
+                (Uint8)(tank+i)->ConstBodyColor.a);
+        filledCircleRGBA(renderer, 1100, (Sint16) y, 20,
+                (Uint8)(tank+i)->ConstInnerColor.r,
+                (Uint8)(tank+i)->ConstInnerColor.g,
+                (Uint8)(tank+i)->ConstInnerColor.b,
+                (Uint8)(tank+i)->ConstInnerColor.a);
+        thickLineRGBA(renderer, 1100 , (Sint16)(y + 25) , 1100 , (Sint16)(y +50) , 10 ,
+                (Uint8)(tank+i)->ConstPipeColor.r,
+                (Uint8)(tank+i)->ConstPipeColor.g,
+                (Uint8)(tank+i)->ConstPipeColor.b,
+                (Uint8)(tank+i)->ConstPipeColor.a);
+        char ScoreString [20] = "Score: ";
+        sprintf(ScoreString + 7 , "%d" , (tank+i)->Score);
+        int n = (int) strlen(ScoreString);
+        SDL_RenderSetScale(renderer , 2 ,2);
+        stringRGBA(renderer , (Sint16)((1100 - n * 8)/2)  , (Sint16) ((y + 70)/2) ,  ScoreString , 0 , 0 , 0 ,255);
+        SDL_RenderSetScale(renderer , 1,1);
+    }
 }
 
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window){

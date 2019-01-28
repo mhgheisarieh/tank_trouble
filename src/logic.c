@@ -14,8 +14,6 @@ void Logics (Map* map){
         map->tank[i].CanXMinus = CanXMinus (map , &map->tank[i]);
         map->tank[i].CanYPlus = CanYPlus (map , &map->tank[i]);
         map->tank[i].CanYMinus = CanYMinus (map , &map->tank[i]);
-        map->tank[i].CanDegPlus = CanDegPlus (map , &map->tank[i]);
-        map->tank[i].CanDegMinus = CanDegMinus (map , &map->tank[i]);
     }
 }
 
@@ -102,34 +100,6 @@ bool CanYMinus (Map* map , Tank* tank){
         }
     }
     return can;
-}
-
-bool CanDegPlus (Map* map , Tank* tank) {
-    bool can =1;
-    if (IsDotInWall(map , tank->x +  PipeLength * (int) cos((float) tank->deg) , tank->y + PipeLength * (int) sin((float) tank->deg)))
-        can =0;
-    return can;
-}
-
-bool CanDegMinus (Map* map , Tank* tank) {
-    bool can =1;
-    if (IsDotInWall(map , tank->x +  PipeLength * (int) cos((float) tank->deg - DegStep) , tank->y + PipeLength * (int) sin((float) tank->deg - DegStep)))
-        can =0;
-    return can;
-}
-
-bool IsDotInWall (Map* map , int x , int y){
-    bool IsDotInWall = 0;
-    for (int i=0 ; i <map->NumOfWalls ; i++){
-        if (    (x < ( map->wall[i].Rx2 + 6))
-            &&  (x > ( map->wall[i].Rx1 - 6))
-            &&  (y < ( map->wall[i].Ry2 + 6))
-            &&  (y > ( map->wall[i].Ry1 - 6))) {
-            IsDotInWall = 1;
-            break;
-        }
-    }
-    return IsDotInWall;
 }
 
 bool IsTankInWall (Map* map , Tank* tank){

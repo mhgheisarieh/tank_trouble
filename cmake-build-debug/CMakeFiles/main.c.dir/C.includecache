@@ -12,7 +12,7 @@
 struct.h
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/managment.c
 stdio.h
 -
 stdbool.h
@@ -25,10 +25,14 @@ SDL.h
 -
 SDL2_gfxPrimitives.h
 -
-physics.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
-logic.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
+struct.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+newgame.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newgame.h
+
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newgame.h
+struct.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 struct.h
@@ -43,6 +47,34 @@ stdbool.h
 -
 constants.h
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
+
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c
+stdio.h
+-
+stdbool.h
+-
+math.h
+-
+stdlib.h
+-
+string.h
+-
+SDL.h
+-
+SDL2_gfxPrimitives.h
+-
+view.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
+physics.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+logic.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
+
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
+struct.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
+stdbool.h
+-
 
 /usr/include/SDL2/SDL.h
 SDL_main.h

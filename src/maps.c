@@ -11,14 +11,14 @@
 
 
 void LoadMap (Map* map){
+    for (int i=0; i<MaxNumOfWalls; i++){
+        map->wall[i].exist = 0;
+    }
     FILE *fp;
     char filename [10] = "maps/" ;
     srand(time(NULL));
     int k = rand() % 3;
-    filename [5]= '0' + k + 1;
-    for (int i=6; i<10; i++){
-        filename[i] = 0;
-    }
+    filename [5]= (char) ('0' + k + 1);
     strcat (filename , ".txt");
     fp = fopen(filename, "r");
     fscanf(fp, "%d\n", &map->NumOfWalls);

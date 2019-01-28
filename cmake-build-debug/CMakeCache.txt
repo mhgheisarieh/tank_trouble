@@ -197,12 +197,6 @@ main.c_BINARY_DIR:STATIC=/media/gheisarieh/E860844D60842502/Sharif University - 
 //Value Computed by CMake
 main.c_SOURCE_DIR:STATIC=/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project
 
-//Value Computed by CMake
-project_name_BINARY_DIR:STATIC=/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug
-
-//Value Computed by CMake
-project_name_SOURCE_DIR:STATIC=/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project
-
 
 ########################
 # INTERNAL cache entries

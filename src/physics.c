@@ -8,6 +8,16 @@
 #include "physics.h"
 #include "logic.h"
 
+void Physics (Map* map){
+    for (int i=0 ; i<NumOfTank; i++){
+        moveTank(&map->tank[i]);
+        turnTank(&map->tank[i]);
+        for (int j=0; j<NumOfBulls; j++)
+            if (map->tank[i].bullet[j].Exist)
+                move_bullet(&map->tank[i].bullet[j] , map);
+    }
+}
+
 int IsPlus(double i){
     if (i>=0) return 1;
     return 0;
@@ -50,24 +60,24 @@ void moveTank(Tank* tank) {
 }
 
 void turnTank(Tank* tank){
-    if (tank->Key.Right_Key && tank->CanDegPlus)
+    if (tank->Key.Right_Key)
         tank->deg += DegStep;
-    if (tank->Key.Left_Key  && tank->CanDegMinus)
+    if (tank->Key.Left_Key)
         tank->deg -= DegStep;
 }
 
 void fire(Tank* tank){
+    if (!tank->IsAlive) return;
     if (tank->NumOFExitBulls == NumOfBulls) return;
     int i;
     for (i=0; i<NumOfBulls; i++)
-        if (tank->bullet[i].Exist==0){
+        if (tank->bullet[i].Exist==0)
             break;
-        }
     tank->bullet[i].Exist =1;
     tank->bullet[i].CosDeg = cosf((float)tank->deg);
     tank->bullet[i].SinDeg = sinf((float)tank->deg);
-    tank->bullet[i].x = tank->x + PipeLength*(cosf((float)tank->deg));
-    tank->bullet[i].y = tank->y + PipeLength*(sinf((float)tank->deg));
+    tank->bullet[i].x = tank->x + PipeLength*(cosf((float)tank->deg))*0.9;
+    tank->bullet[i].y = tank->y + PipeLength*(sinf((float)tank->deg))*0.9;
     tank->bullet[i].TimeAppear = SDL_GetTicks();
     tank->NumOFExitBulls ++;
 }
@@ -79,14 +89,14 @@ void move_bullet(Bullet* bullet , Map* map){
     for (int WallNum = 0; WallNum < map->NumOfWalls ; WallNum++){
         if(map->wall[WallNum].x1 == map->wall[WallNum].x2) {
 
-            if(bullet->y >= map->wall[WallNum].Ry1 && bullet->y <= map->wall[WallNum].Ry2) {
+            if(bullet->y >= map->wall[WallNum].Ry1 -5 && bullet->y <= map->wall[WallNum].Ry2 +5) {
                 if((tmp.x <= map->wall[WallNum].Rx1 && bullet->x >= map->wall[WallNum].Rx1)
                 || (tmp.x >= map->wall[WallNum].Rx1 && bullet->x <= map->wall[WallNum].Rx1)){
                     bullet->CosDeg *= -1;
                 }
             }
         } else if(map->wall[WallNum].y1 == map->wall[WallNum].y2) {
-            if(bullet->x >= map->wall[WallNum].Rx1 && bullet->x <= map->wall[WallNum].Rx2) {
+            if(bullet->x >= map->wall[WallNum].Rx1 -5 && bullet->x <= map->wall[WallNum].Rx2 +5) {
                 if((tmp.y <= map->wall[WallNum].Ry1 && bullet->y >= map->wall[WallNum].Ry1)
                 || (tmp.y >= map->wall[WallNum].Ry1 && bullet->y <= map->wall[WallNum].Ry1 )){
                     bullet->SinDeg *= -1;
