@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-
 #include "newround.h"
 #include "logic.h"
 #include "maps.h"

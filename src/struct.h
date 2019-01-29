@@ -50,9 +50,23 @@ typedef struct {
     int DeathTime;
     bool IsAlive;
 } Map;
-typedef struct {
-    int x;
-    int y1, y2;
 
+enum Actions {Play3v3 , Play2v2 , load, save , setting , about ,quit , None};
+
+typedef struct {
+    int y , x1, x2;
+    char text [50];
+    SDL_Keycode ActionKey;
+    enum Actions action;
+    bool IsSelected;
 } Button;
+
+typedef struct {
+    Button buttons[NumOfButtons];
+    int SelectedButtonNum;
+    Color ButtonColor;
+    Color SelectedColor;
+    enum Actions  Action;
+}FirstPage;
+
 #endif

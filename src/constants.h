@@ -3,6 +3,7 @@
 #define MAIN_C_CONSTANTS_H
 
 #define Exit 1000
+#define NumOfButtons 7
 #define Step 5
 #define NumOfBulls 5
 #define DegStep 0.15
@@ -13,5 +14,6 @@
 #define TankRadius 30
 #define PipeLength 31
 #define TimeOfBetweenGames 3000
+#define ButtonWide 80
 
 #endif //MAIN_C_CONSTANTS_H

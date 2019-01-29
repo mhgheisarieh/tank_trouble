@@ -57,9 +57,22 @@ include CMakeFiles/main.c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.c.dir/flags.make
 
+CMakeFiles/main.c.dir/src/Buttons.c.o: CMakeFiles/main.c.dir/flags.make
+CMakeFiles/main.c.dir/src/Buttons.c.o: ../src/Buttons.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.c.dir/src/Buttons.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/Buttons.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Buttons.c"
+
+CMakeFiles/main.c.dir/src/Buttons.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.c.dir/src/Buttons.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Buttons.c" > CMakeFiles/main.c.dir/src/Buttons.c.i
+
+CMakeFiles/main.c.dir/src/Buttons.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.c.dir/src/Buttons.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Buttons.c" -o CMakeFiles/main.c.dir/src/Buttons.c.s
+
 CMakeFiles/main.c.dir/src/events.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/events.c.o: ../src/events.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.c.dir/src/events.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.c.dir/src/events.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/events.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/events.c"
 
 CMakeFiles/main.c.dir/src/events.c.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/main.c.dir/src/events.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/logic.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/logic.c.o: ../src/logic.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.c.dir/src/logic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.c.dir/src/logic.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/logic.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.c"
 
 CMakeFiles/main.c.dir/src/logic.c.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/main.c.dir/src/logic.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/main.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.c.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.c.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/main.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/main.c"
 
 CMakeFiles/main.c.dir/src/main.c.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/main.c.dir/src/main.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/managment.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/managment.c.o: ../src/managment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.c.dir/src/managment.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.c.dir/src/managment.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/managment.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/managment.c"
 
 CMakeFiles/main.c.dir/src/managment.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/main.c.dir/src/managment.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/maps.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/maps.c.o: ../src/maps.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.c.dir/src/maps.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/main.c.dir/src/maps.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/maps.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.c"
 
 CMakeFiles/main.c.dir/src/maps.c.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/main.c.dir/src/maps.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/newround.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/newround.c.o: ../src/newround.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/main.c.dir/src/newround.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/main.c.dir/src/newround.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/newround.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.c"
 
 CMakeFiles/main.c.dir/src/newround.c.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/main.c.dir/src/newround.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/physics.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/physics.c.o: ../src/physics.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/main.c.dir/src/physics.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/main.c.dir/src/physics.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/physics.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.c"
 
 CMakeFiles/main.c.dir/src/physics.c.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/main.c.dir/src/physics.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/startofgame.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/startofgame.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/main.c.dir/src/startofgame.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/main.c.dir/src/startofgame.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/startofgame.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.c"
 
 CMakeFiles/main.c.dir/src/startofgame.c.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/main.c.dir/src/startofgame.c.s: cmake_force
 
 CMakeFiles/main.c.dir/src/view.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/view.c.o: ../src/view.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/main.c.dir/src/view.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/main.c.dir/src/view.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/view.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c"
 
 CMakeFiles/main.c.dir/src/view.c.i: cmake_force
@@ -176,6 +189,7 @@ CMakeFiles/main.c.dir/src/view.c.s: cmake_force
 
 # Object files for target main.c
 main_c_OBJECTS = \
+"CMakeFiles/main.c.dir/src/Buttons.c.o" \
 "CMakeFiles/main.c.dir/src/events.c.o" \
 "CMakeFiles/main.c.dir/src/logic.c.o" \
 "CMakeFiles/main.c.dir/src/main.c.o" \
@@ -189,6 +203,7 @@ main_c_OBJECTS = \
 # External object files for target main.c
 main_c_EXTERNAL_OBJECTS =
 
+main.c: CMakeFiles/main.c.dir/src/Buttons.c.o
 main.c: CMakeFiles/main.c.dir/src/events.c.o
 main.c: CMakeFiles/main.c.dir/src/logic.c.o
 main.c: CMakeFiles/main.c.dir/src/main.c.o
@@ -200,7 +215,7 @@ main.c: CMakeFiles/main.c.dir/src/startofgame.c.o
 main.c: CMakeFiles/main.c.dir/src/view.c.o
 main.c: CMakeFiles/main.c.dir/build.make
 main.c: CMakeFiles/main.c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable main.c"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

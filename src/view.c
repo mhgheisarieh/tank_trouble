@@ -100,6 +100,41 @@ void DrawScores (SDL_Renderer* renderer, Map* map){
     }
 }
 
+void DrawButtons (SDL_Renderer* renderer, FirstPage* FirstPage){
+    for (int i=0; i<NumOfButtons; i++){
+        if (i == FirstPage->SelectedButtonNum) continue;
+        thickLineRGBA(renderer,  (Sint16) FirstPage->buttons[i].x1 ,
+                                 (Sint16) FirstPage->buttons[i].y ,
+                                 (Sint16) FirstPage->buttons[i].x2 ,
+                                 (Sint16) FirstPage->buttons[i].y , ButtonWide ,
+                                 (Uint8) FirstPage->ButtonColor.r ,
+                                 (Uint8) FirstPage->ButtonColor.g ,
+                                 (Uint8) FirstPage->ButtonColor.b ,
+                                 (Uint8) FirstPage->ButtonColor.a);
+    }
+    thickLineRGBA(renderer,  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].x1 ,
+                  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].y ,
+                  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].x2 ,
+                  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].y , ButtonWide ,
+                  (Uint8) FirstPage->SelectedColor.r ,
+                  (Uint8) FirstPage->SelectedColor.g ,
+                  (Uint8) FirstPage->SelectedColor.b ,
+                  (Uint8) FirstPage->SelectedColor.a);
+    for (int i=0; i<NumOfButtons; i++) {
+        SDL_RenderSetScale(renderer , 1.5 ,1.5);
+        stringRGBA(renderer, (Sint16)((200 - 6 * strlen(FirstPage->buttons[i].text))/1.5),
+                   (Sint16)((FirstPage->buttons[i].y)/1.5), FirstPage->buttons[i].text, 0, 0, 0, 255);
+        SDL_RenderSetScale(renderer , 1 ,1);
+    }
+}
+
+void WriteAbouts (SDL_Renderer* renderer){
+    stringRGBA(renderer, 20 , 720 ,"Play 3v3: 3 Key     Play 2v2: 2 Key" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 740 ,"Load Game: L        Save Game: S" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 760 ,"Preference: P       About Game: F1" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 780 ,"Quit: Q" , 0 , 0 ,0 ,255);
+}
+
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);

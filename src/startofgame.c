@@ -14,9 +14,10 @@
 #include "managment.h"
 #include "startofgame.h"
 
-void StartGame (){
+void StartGame (int NumOfTank){
+    gfxPrimitivesSetFont(NULL,0,0);
     Map map;
-    map.NumOfTanks = 3;
+    map.NumOfTanks = NumOfTank;
     for (int i=0; i < map.NumOfTanks; i++) {
         map.tank[i].Score = 0;
     }

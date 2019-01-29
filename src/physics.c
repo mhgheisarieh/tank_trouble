@@ -4,7 +4,6 @@
 #include <math.h>
 #include <SDL.h>
 #include <SDL2_gfxPrimitives.h>
-
 #include "physics.h"
 #include "logic.h"
 
