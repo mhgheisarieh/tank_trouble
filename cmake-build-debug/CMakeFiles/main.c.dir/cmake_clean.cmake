@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.c.dir/src/maps.c.o"
   "CMakeFiles/main.c.dir/src/newround.c.o"
   "CMakeFiles/main.c.dir/src/physics.c.o"
+  "CMakeFiles/main.c.dir/src/save.c.o"
   "CMakeFiles/main.c.dir/src/startofgame.c.o"
   "CMakeFiles/main.c.dir/src/view.c.o"
   "main.c.pdb"

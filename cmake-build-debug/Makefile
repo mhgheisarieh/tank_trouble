@@ -339,6 +339,33 @@ src/physics.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/physics.c.s
 .PHONY : src/physics.c.s
 
+src/save.o: src/save.c.o
+
+.PHONY : src/save.o
+
+# target to build an object file
+src/save.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/save.c.o
+.PHONY : src/save.c.o
+
+src/save.i: src/save.c.i
+
+.PHONY : src/save.i
+
+# target to preprocess a source file
+src/save.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/save.c.i
+.PHONY : src/save.c.i
+
+src/save.s: src/save.c.s
+
+.PHONY : src/save.s
+
+# target to generate assembly for a file
+src/save.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/save.c.s
+.PHONY : src/save.c.s
+
 src/startofgame.o: src/startofgame.c.o
 
 .PHONY : src/startofgame.o
@@ -426,6 +453,9 @@ help:
 	@echo "... src/physics.o"
 	@echo "... src/physics.i"
 	@echo "... src/physics.s"
+	@echo "... src/save.o"
+	@echo "... src/save.i"
+	@echo "... src/save.s"
 	@echo "... src/startofgame.o"
 	@echo "... src/startofgame.i"
 	@echo "... src/startofgame.s"

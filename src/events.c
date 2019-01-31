@@ -9,6 +9,7 @@
 #include "struct.h"
 #include "physics.h"
 #include "startofgame.h"
+#include "save.h"
 
 int handleEvents(Map* map , MiddlePage* MiddlePage ) {
     SDL_Event event;
@@ -50,7 +51,7 @@ int handleEvents(Map* map , MiddlePage* MiddlePage ) {
                 }
             }
         } else {
-            if (event.type == SDL_KEYUP && map->WinnerTank == NULL) {
+            if (event.type == SDL_KEYUP && map->WinnerTank == -1) {
                 switch (event.key.keysym.sym) {
                     case SDLK_UP:
                         if (MiddlePage->SelectedButtonNum == 0) MiddlePage->SelectedButtonNum = NumOfMiddleMenuButtons;
@@ -81,6 +82,7 @@ int handleEvents(Map* map , MiddlePage* MiddlePage ) {
                     case Back:
                         return ENDGAME;
                     case save:
+                        //SaveGame (map);
                         break;
                 }
             } else if (event.type == SDL_KEYUP && map->WinnerTank != NULL && event.key.keysym.sym == SDLK_RETURN) {
