@@ -19,6 +19,7 @@ void StartGame (int NumOfTank , SDL_Renderer* renderer ,  SDL_Window* window){
     Map map;
     map.NumOfTanks = NumOfTank;
     map.Enabled = 1;
+    map.WinnerTank = NULL;
     int status  = AskWinPoint (renderer , &map , window);
     if (status == Exit) return;
     for (int i=0; i < map.NumOfTanks; i++) {
@@ -40,13 +41,19 @@ void StartGame (int NumOfTank , SDL_Renderer* renderer ,  SDL_Window* window){
         }
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
+        map.GameTime = (map.frames - 1) * 20;
         DrawMap(renderer , &map);
         if (map.Enabled){
+            map.frames ++;
             Logics(&map);
             Physics(&map);
             CheckGame(&map);
         } else {
-            DrawMiddlePage (renderer , &MiddlePage);
+            if (map.WinnerTank == NULL)
+                DrawMiddlePage (renderer , &MiddlePage);
+            else {
+                DrawWinPage (renderer, &map);
+            }
         }
         SDL_RenderPresent(renderer);
         while (SDL_GetTicks() - start_ticks < 1000 / FPS);

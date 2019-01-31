@@ -207,9 +207,11 @@ CMakeFiles/main.c.dir/src/main.c.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/main.c.dir/src/main.c.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/main.c.dir/src/main.c.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/main.c.dir/src/managment.c.o: ../src/Menus.h
 CMakeFiles/main.c.dir/src/managment.c.o: ../src/constants.h
 CMakeFiles/main.c.dir/src/managment.c.o: ../src/managment.c
 CMakeFiles/main.c.dir/src/managment.c.o: ../src/newround.h
+CMakeFiles/main.c.dir/src/managment.c.o: ../src/startofgame.h
 CMakeFiles/main.c.dir/src/managment.c.o: ../src/struct.h
 CMakeFiles/main.c.dir/src/managment.c.o: /usr/include/SDL2/SDL.h
 CMakeFiles/main.c.dir/src/managment.c.o: /usr/include/SDL2/SDL2_gfxPrimitives.h

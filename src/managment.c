@@ -6,6 +6,8 @@
 #include <SDL2_gfxPrimitives.h>
 #include "struct.h"
 #include "newround.h"
+#include "startofgame.h"
+#include "Menus.h"
 
 void LossOfTank (Tank* tank , Bullet* bullet){
     bullet->Exist = 0;
@@ -46,18 +48,22 @@ void CheckGame(Map* map){
     }
     if (map->IsAlive && NumOfAliveTanks == 1){
         map->IsAlive = 0;
-        map->DeathTime = SDL_GetTicks();
+        map->DeathTime = SDL_GetTicks()-map->StartRoundTime;
     }
-    if (SDL_GetTicks()-map->DeathTime > TimeOfBetweenGames && !map->IsAlive){
+    if (map->GameTime - map->DeathTime > TimeOfBetweenGames && !map->IsAlive){
         for (int i=0; i<map->NumOfTanks; i++){
             if (map->tank[i].IsAlive)
                  map->tank[i].Score ++;
         }
+        bool IsEndedGame = 0;
         for (int i=0; i<map->NumOfTanks; i++){
             if (map->tank[i].Score == map->WinPoint){
-
+                IsEndedGame = 1;
+                map->Enabled = 0;
+                map->WinnerTank = &map->tank[i];
             }
         }
-        NewRound(map);
+        if(!IsEndedGame)
+            NewRound(map);
     }
 }

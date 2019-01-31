@@ -116,8 +116,8 @@ bool IsTankInWall (Map* map , Tank* tank){
     return IsInWall;
 }
 
-bool IsAliveBullet (Bullet* bullet){
-    if ((SDL_GetTicks()-(bullet->TimeAppear))>TimeOfBull) {
+bool IsAliveBullet (int GameTime , Bullet* bullet){
+    if (GameTime-(bullet->TimeAppear)>TimeOfBull) {
         bullet->Exist = 0;
         return 0;
     }

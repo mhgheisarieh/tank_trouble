@@ -48,7 +48,10 @@ typedef struct {
     int WinPoint;
     Wall wall[MaxNumOfWalls];
     Tank tank [3];
+    Tank* WinnerTank;
     int DeathTime;
+    int GameTime , StartRoundTime;
+    int frames;
     bool IsAlive;
     bool Enabled;
 } Map;

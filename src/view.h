@@ -15,6 +15,7 @@ void DrawScores (SDL_Renderer*, Map* map);
 void DrawFirstPage (SDL_Renderer* renderer, FirstPage* FirstPage);
 void DrawAskPointPage (SDL_Renderer* renderer , NumberBox* numberbox);
 void DrawMiddlePage (SDL_Renderer* renderer , MiddlePage* MiddlePage);
+void DrawWinPage (SDL_Renderer* renderer, Map* map);
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window);
 
 #endif //MAIN_C_VIEW_H

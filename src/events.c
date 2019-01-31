@@ -25,7 +25,7 @@ int handleEvents(Map* map , MiddlePage* MiddlePage ) {
                     if (event.key.keysym.sym == map->tank[i].Right_Key)
                         map->tank[i].Key.Right_Key = 1;
                     if (event.key.keysym.sym == map->tank[i].Shoot_Key && map->tank[i].canshoot) {
-                        fire(&(map->tank[i]));
+                        fire(&(map->tank[i]) , map->GameTime);
                         map->tank[i].canshoot = false;
                     }
                 }
@@ -50,7 +50,7 @@ int handleEvents(Map* map , MiddlePage* MiddlePage ) {
                 }
             }
         } else {
-            if (event.type == SDL_KEYUP) {
+            if (event.type == SDL_KEYUP && map->WinnerTank == NULL) {
                 switch (event.key.keysym.sym) {
                     case SDLK_UP:
                         if (MiddlePage->SelectedButtonNum == 0) MiddlePage->SelectedButtonNum = NumOfMiddleMenuButtons;
@@ -83,6 +83,8 @@ int handleEvents(Map* map , MiddlePage* MiddlePage ) {
                     case save:
                         break;
                 }
+            } else if (event.type == SDL_KEYUP && map->WinnerTank != NULL && event.key.keysym.sym == SDLK_RETURN) {
+                return ENDGAME;
             }
         }
         if (event.window.event==SDL_WINDOWEVENT_CLOSE)
@@ -138,10 +140,10 @@ void handleEventsOfFirstMenu (FirstPage* FirstPage){
 int handleEventsOfNumberBox (NumberBox* numberBox){
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
-        if (event.type == SDL_KEYUP){
+        if (event.type == SDL_KEYDOWN){
             switch (event.key.keysym.sym) {
                 case SDLK_UP:
-                    if (numberBox->number<100)
+                    if (numberBox->number<1000)
                     numberBox->number ++;
                     break;
                 case SDLK_DOWN:

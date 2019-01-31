@@ -14,8 +14,11 @@ void NewRound(Map *map){
 
 void Definition(Map* map){
 
+    map->GameTime = 0;
+    map->StartRoundTime = SDL_GetTicks();
     map->DeathTime = SDL_GetTicks();
     map->IsAlive = 1;
+    map->frames = 0;
 
     srand((unsigned int)time(NULL));
 

@@ -65,7 +65,7 @@ void turnTank(Tank* tank){
         tank->deg -= DegStep;
 }
 
-void fire(Tank* tank){
+void fire(Tank* tank , int GameTime){
     if (!tank->IsAlive) return;
     if (tank->NumOFExitBulls == NumOfBulls) return;
     int i;
@@ -77,7 +77,7 @@ void fire(Tank* tank){
     tank->bullet[i].SinDeg = sinf((float)tank->deg);
     tank->bullet[i].x = tank->x + PipeLength*(cosf((float)tank->deg))*0.9;
     tank->bullet[i].y = tank->y + PipeLength*(sinf((float)tank->deg))*0.9;
-    tank->bullet[i].TimeAppear = SDL_GetTicks();
+    tank->bullet[i].TimeAppear = GameTime;
     tank->NumOFExitBulls ++;
 }
 

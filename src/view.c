@@ -63,7 +63,7 @@ void DrawBullets (SDL_Renderer* renderer, Map* map){
         for (int j = 0; j < NumOfBulls; j++)
             if(map->tank[i].bullet[j].Exist){
                 DrawBullet(renderer, &map->tank[i].bullet[j]);
-                if (!IsAliveBullet (&map->tank[i].bullet[j])){
+                if (!IsAliveBullet (map->GameTime , &map->tank[i].bullet[j])){
                     map->tank[i].NumOFExitBulls --;
                 }
             }
@@ -123,7 +123,7 @@ void DrawFirstPage (SDL_Renderer* renderer, FirstPage* FirstPage){
         SDL_RenderSetScale(renderer , 1 ,1);
     }
     SDL_RenderSetScale(renderer , 2.5,2.5);
-    stringRGBA(renderer, 20 , 50/3 ,"Use Up and Down Key and Enter key or Hotkeys to select!" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 20 ,"Use Up and Down Key and Enter key or Hotkeys to select!" , 0 , 0 ,0 ,255);
     SDL_RenderSetScale(renderer , 2 ,2 );
     stringRGBA(renderer, 20 , 700/2 ,"Play 2v2: 2 Key" , 0 , 0 ,0 ,255);
     stringRGBA(renderer, 20 , 760/2 ,"Play 3v3: 3 Key" , 0 , 0 ,0 ,255);
@@ -134,8 +134,11 @@ void DrawFirstPage (SDL_Renderer* renderer, FirstPage* FirstPage){
 }
 
 void DrawMiddlePage (SDL_Renderer* renderer ,MiddlePage* MiddlePage) {
-    roundedBoxRGBA (renderer, 300 , 250, 900,775,RoundOfButtons , MiddlePage->BackgroundColor.r , MiddlePage->BackgroundColor.g  ,
-                                                        MiddlePage->BackgroundColor.b , MiddlePage->BackgroundColor.a);
+    roundedBoxRGBA (renderer, 300 , 250, 900, 775, RoundOfButtons ,
+            (Uint8) MiddlePage->BackgroundColor.r ,
+            (Uint8) MiddlePage->BackgroundColor.g ,
+            (Uint8) MiddlePage->BackgroundColor.b ,
+            (Uint8) MiddlePage->BackgroundColor.a);
     for (int i=0; i<NumOfMiddleMenuButtons; i++){
         if (i == MiddlePage->SelectedButtonNum) continue;
         roundedBoxRGBA(renderer,  ButtonsX1 , (Sint16) MiddlePage->buttons[i].y1 ,
@@ -168,7 +171,17 @@ void DrawAskPointPage (SDL_Renderer* renderer , NumberBox* numberbox){
                     numberbox->Color.r , numberbox->Color.g , numberbox->Color.b , numberbox->Color.a);
     stringRGBA(renderer, 355 , 60 ,point , 0 , 0 ,0 ,255);
     SDL_RenderSetScale(renderer , 1,1);
+}
 
+void DrawWinPage (SDL_Renderer* renderer, Map* map){
+    if (map->NumOfTanks == 2){
+        roundedBoxRGBA(renderer, 200 , 200 , 300 , 300 , RoundOfNumberBox ,
+                       100, 200, 0 , 100);
+    }
+    if (map->NumOfTanks == 3){
+        roundedBoxRGBA(renderer, 200 , 200 , 300 , 300 , RoundOfNumberBox ,
+                       100, 200, 0 , 100);
+    }
 }
 
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window){

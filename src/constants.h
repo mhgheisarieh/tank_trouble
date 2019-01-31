@@ -16,7 +16,7 @@
 #define FPS 50
 #define TankRadius 30
 #define PipeLength 31
-#define TimeOfBetweenGames 3000
+#define TimeOfBetweenGames 2000
 #define RoundOfButtons 10
 #define RoundOfNumberBox 2
 #define ButtonsX1 400
