@@ -28,7 +28,7 @@ void Definition(Map* map){
     map->tank[0].InnerColor.r = 0;
     map->tank[0].InnerColor.g = 0;
     map->tank[0].InnerColor.b = 0;
-    map->tank[0].InnerColor.a = 250;
+    map->tank[0].InnerColor.a = 200;
     map->tank[0].PipeColor.r = 50;
     map->tank[0].PipeColor.g = 50;
     map->tank[0].PipeColor.b = 50;
@@ -40,7 +40,7 @@ void Definition(Map* map){
     map->tank[0].ConstInnerColor.r = 0;
     map->tank[0].ConstInnerColor.g = 0;
     map->tank[0].ConstInnerColor.b = 0;
-    map->tank[0].ConstInnerColor.a = 250;
+    map->tank[0].ConstInnerColor.a = 200;
     map->tank[0].ConstPipeColor.r = 50;
     map->tank[0].ConstPipeColor.g = 50;
     map->tank[0].ConstPipeColor.b = 50;
@@ -73,7 +73,7 @@ void Definition(Map* map){
     map->tank[1].InnerColor.r = 0;
     map->tank[1].InnerColor.g = 0;
     map->tank[1].InnerColor.b = 0;
-    map->tank[1].InnerColor.a = 250;
+    map->tank[1].InnerColor.a = 200;
     map->tank[1].PipeColor.r = 50;
     map->tank[1].PipeColor.g = 50;
     map->tank[1].PipeColor.b = 50;
@@ -85,7 +85,7 @@ void Definition(Map* map){
     map->tank[1].ConstInnerColor.r = 0;
     map->tank[1].ConstInnerColor.g = 0;
     map->tank[1].ConstInnerColor.b = 0;
-    map->tank[1].ConstInnerColor.a = 250;
+    map->tank[1].ConstInnerColor.a = 200;
     map->tank[1].ConstPipeColor.r = 50;
     map->tank[1].ConstPipeColor.g = 50;
     map->tank[1].ConstPipeColor.b = 50;
@@ -120,7 +120,7 @@ void Definition(Map* map){
     map->tank[2].InnerColor.r = 0;
     map->tank[2].InnerColor.g = 0;
     map->tank[2].InnerColor.b = 0;
-    map->tank[2].InnerColor.a = 250;
+    map->tank[2].InnerColor.a = 200;
     map->tank[2].PipeColor.r = 50;
     map->tank[2].PipeColor.g = 50;
     map->tank[2].PipeColor.b = 50;
@@ -132,7 +132,7 @@ void Definition(Map* map){
     map->tank[2].ConstInnerColor.r = 0;
     map->tank[2].ConstInnerColor.g = 0;
     map->tank[2].ConstInnerColor.b = 0;
-    map->tank[2].ConstInnerColor.a = 250;
+    map->tank[2].ConstInnerColor.a = 200;
     map->tank[2].ConstPipeColor.r = 50;
     map->tank[2].ConstPipeColor.g = 50;
     map->tank[2].ConstPipeColor.b = 50;
@@ -141,7 +141,7 @@ void Definition(Map* map){
     map->tank[2].Up_key =SDLK_u;
     map->tank[2].Left_Key =SDLK_h;
     map->tank[2].Right_Key =SDLK_k;
-    map->tank[2].Shoot_Key = SDLK_g;
+    map->tank[2].Shoot_Key = SDLK_t;
     map->tank[2].Key.Right_Key = 0;
     map->tank[2].Key.Up_key = 0;
     map->tank[2].Key.Left_Key = 0;

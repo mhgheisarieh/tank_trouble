@@ -57,18 +57,18 @@ include CMakeFiles/main.c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.c.dir/flags.make
 
-CMakeFiles/main.c.dir/src/Buttons.c.o: CMakeFiles/main.c.dir/flags.make
-CMakeFiles/main.c.dir/src/Buttons.c.o: ../src/Buttons.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.c.dir/src/Buttons.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/Buttons.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Buttons.c"
+CMakeFiles/main.c.dir/src/Menus.c.o: CMakeFiles/main.c.dir/flags.make
+CMakeFiles/main.c.dir/src/Menus.c.o: ../src/Menus.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.c.dir/src/Menus.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.c.dir/src/Menus.c.o   -c "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Menus.c"
 
-CMakeFiles/main.c.dir/src/Buttons.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.c.dir/src/Buttons.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Buttons.c" > CMakeFiles/main.c.dir/src/Buttons.c.i
+CMakeFiles/main.c.dir/src/Menus.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.c.dir/src/Menus.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Menus.c" > CMakeFiles/main.c.dir/src/Menus.c.i
 
-CMakeFiles/main.c.dir/src/Buttons.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.c.dir/src/Buttons.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Buttons.c" -o CMakeFiles/main.c.dir/src/Buttons.c.s
+CMakeFiles/main.c.dir/src/Menus.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.c.dir/src/Menus.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Menus.c" -o CMakeFiles/main.c.dir/src/Menus.c.s
 
 CMakeFiles/main.c.dir/src/events.c.o: CMakeFiles/main.c.dir/flags.make
 CMakeFiles/main.c.dir/src/events.c.o: ../src/events.c
@@ -189,7 +189,7 @@ CMakeFiles/main.c.dir/src/view.c.s: cmake_force
 
 # Object files for target main.c
 main_c_OBJECTS = \
-"CMakeFiles/main.c.dir/src/Buttons.c.o" \
+"CMakeFiles/main.c.dir/src/Menus.c.o" \
 "CMakeFiles/main.c.dir/src/events.c.o" \
 "CMakeFiles/main.c.dir/src/logic.c.o" \
 "CMakeFiles/main.c.dir/src/main.c.o" \
@@ -203,7 +203,7 @@ main_c_OBJECTS = \
 # External object files for target main.c
 main_c_EXTERNAL_OBJECTS =
 
-main.c: CMakeFiles/main.c.dir/src/Buttons.c.o
+main.c: CMakeFiles/main.c.dir/src/Menus.c.o
 main.c: CMakeFiles/main.c.dir/src/events.c.o
 main.c: CMakeFiles/main.c.dir/src/logic.c.o
 main.c: CMakeFiles/main.c.dir/src/main.c.o

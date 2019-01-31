@@ -123,32 +123,32 @@ main.c/fast:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
 .PHONY : main.c/fast
 
-src/Buttons.o: src/Buttons.c.o
+src/Menus.o: src/Menus.c.o
 
-.PHONY : src/Buttons.o
+.PHONY : src/Menus.o
 
 # target to build an object file
-src/Buttons.c.o:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Buttons.c.o
-.PHONY : src/Buttons.c.o
+src/Menus.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Menus.c.o
+.PHONY : src/Menus.c.o
 
-src/Buttons.i: src/Buttons.c.i
+src/Menus.i: src/Menus.c.i
 
-.PHONY : src/Buttons.i
+.PHONY : src/Menus.i
 
 # target to preprocess a source file
-src/Buttons.c.i:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Buttons.c.i
-.PHONY : src/Buttons.c.i
+src/Menus.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Menus.c.i
+.PHONY : src/Menus.c.i
 
-src/Buttons.s: src/Buttons.c.s
+src/Menus.s: src/Menus.c.s
 
-.PHONY : src/Buttons.s
+.PHONY : src/Menus.s
 
 # target to generate assembly for a file
-src/Buttons.c.s:
-	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Buttons.c.s
-.PHONY : src/Buttons.c.s
+src/Menus.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Menus.c.s
+.PHONY : src/Menus.c.s
 
 src/events.o: src/events.c.o
 
@@ -402,9 +402,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... main.c"
 	@echo "... edit_cache"
-	@echo "... src/Buttons.o"
-	@echo "... src/Buttons.i"
-	@echo "... src/Buttons.s"
+	@echo "... src/Menus.o"
+	@echo "... src/Menus.i"
+	@echo "... src/Menus.s"
 	@echo "... src/events.o"
 	@echo "... src/events.i"
 	@echo "... src/events.s"

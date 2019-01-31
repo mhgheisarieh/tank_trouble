@@ -53,6 +53,11 @@ void CheckGame(Map* map){
             if (map->tank[i].IsAlive)
                  map->tank[i].Score ++;
         }
+        for (int i=0; i<map->NumOfTanks; i++){
+            if (map->tank[i].Score == map->WinPoint){
+
+            }
+        }
         NewRound(map);
     }
 }

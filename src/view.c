@@ -100,39 +100,75 @@ void DrawScores (SDL_Renderer* renderer, Map* map){
     }
 }
 
-void DrawButtons (SDL_Renderer* renderer, FirstPage* FirstPage){
-    for (int i=0; i<NumOfButtons; i++){
+void DrawFirstPage (SDL_Renderer* renderer, FirstPage* FirstPage){
+    for (int i=0; i<NumOfMainMenuButtons; i++){
         if (i == FirstPage->SelectedButtonNum) continue;
-        thickLineRGBA(renderer,  (Sint16) FirstPage->buttons[i].x1 ,
-                                 (Sint16) FirstPage->buttons[i].y ,
-                                 (Sint16) FirstPage->buttons[i].x2 ,
-                                 (Sint16) FirstPage->buttons[i].y , ButtonWide ,
-                                 (Uint8) FirstPage->ButtonColor.r ,
-                                 (Uint8) FirstPage->ButtonColor.g ,
-                                 (Uint8) FirstPage->ButtonColor.b ,
-                                 (Uint8) FirstPage->ButtonColor.a);
+        roundedBoxRGBA(renderer,  ButtonsX1 , (Sint16) FirstPage->buttons[i].y1 ,
+                                        ButtonsX2 , (Sint16) FirstPage->buttons[i].y2 , RoundOfButtons ,
+                                        (Uint8) FirstPage->ButtonColor.r ,
+                                        (Uint8) FirstPage->ButtonColor.g ,
+                                        (Uint8) FirstPage->ButtonColor.b ,
+                                        (Uint8) FirstPage->ButtonColor.a);
     }
-    thickLineRGBA(renderer,  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].x1 ,
-                  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].y ,
-                  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].x2 ,
-                  (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].y , ButtonWide ,
-                  (Uint8) FirstPage->SelectedColor.r ,
-                  (Uint8) FirstPage->SelectedColor.g ,
-                  (Uint8) FirstPage->SelectedColor.b ,
-                  (Uint8) FirstPage->SelectedColor.a);
-    for (int i=0; i<NumOfButtons; i++) {
+    roundedBoxRGBA(renderer,  ButtonsX1 , (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].y1 ,
+                             ButtonsX2 , (Sint16) FirstPage->buttons[FirstPage->SelectedButtonNum].y2 , RoundOfButtons ,
+                             (Uint8) FirstPage->SelectedColor.r ,
+                             (Uint8) FirstPage->SelectedColor.g ,
+                             (Uint8) FirstPage->SelectedColor.b ,
+              (Uint8) FirstPage->SelectedColor.a);
+    for (int i=0; i<NumOfMainMenuButtons; i++) {
         SDL_RenderSetScale(renderer , 1.5 ,1.5);
-        stringRGBA(renderer, (Sint16)((200 - 6 * strlen(FirstPage->buttons[i].text))/1.5),
-                   (Sint16)((FirstPage->buttons[i].y)/1.5), FirstPage->buttons[i].text, 0, 0, 0, 255);
+        stringRGBA(renderer, (Sint16)((600 - 6 * strlen(FirstPage->buttons[i].text))/1.5),
+                   (Sint16)((FirstPage->buttons[i].y1+ FirstPage->buttons[i].y2)/3), FirstPage->buttons[i].text, 0, 0, 0, 255);
+        SDL_RenderSetScale(renderer , 1 ,1);
+    }
+    SDL_RenderSetScale(renderer , 2.5,2.5);
+    stringRGBA(renderer, 20 , 50/3 ,"Use Up and Down Key and Enter key or Hotkeys to select!" , 0 , 0 ,0 ,255);
+    SDL_RenderSetScale(renderer , 2 ,2 );
+    stringRGBA(renderer, 20 , 700/2 ,"Play 2v2: 2 Key" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 760/2 ,"Play 3v3: 3 Key" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 820/2 ,"Load Game: L" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 880/2 ,"About Game: F1" , 0 , 0 ,0 ,255);
+    stringRGBA(renderer, 20 , 940/2 ,"Quit: Q" , 0 , 0 ,0 ,255);
+    SDL_RenderSetScale(renderer , 1 ,1);
+}
+
+void DrawMiddlePage (SDL_Renderer* renderer ,MiddlePage* MiddlePage) {
+    roundedBoxRGBA (renderer, 300 , 250, 900,775,RoundOfButtons , MiddlePage->BackgroundColor.r , MiddlePage->BackgroundColor.g  ,
+                                                        MiddlePage->BackgroundColor.b , MiddlePage->BackgroundColor.a);
+    for (int i=0; i<NumOfMiddleMenuButtons; i++){
+        if (i == MiddlePage->SelectedButtonNum) continue;
+        roundedBoxRGBA(renderer,  ButtonsX1 , (Sint16) MiddlePage->buttons[i].y1 ,
+                       ButtonsX2 , (Sint16) MiddlePage->buttons[i].y2 , RoundOfButtons ,
+                       (Uint8) MiddlePage->ButtonColor.r ,
+                       (Uint8) MiddlePage->ButtonColor.g ,
+                       (Uint8) MiddlePage->ButtonColor.b ,
+                       (Uint8) MiddlePage->ButtonColor.a);
+    }
+    roundedBoxRGBA(renderer,  ButtonsX1 , (Sint16) MiddlePage->buttons[MiddlePage->SelectedButtonNum].y1 ,
+                   ButtonsX2 , (Sint16) MiddlePage->buttons[MiddlePage->SelectedButtonNum].y2 , RoundOfButtons ,
+                   (Uint8) MiddlePage->SelectedColor.r ,
+                   (Uint8) MiddlePage->SelectedColor.g ,
+                   (Uint8) MiddlePage->SelectedColor.b ,
+                   (Uint8) MiddlePage->SelectedColor.a);
+    for (int i=0; i<NumOfMiddleMenuButtons; i++) {
+        SDL_RenderSetScale(renderer , 1.5 ,1.5);
+        stringRGBA(renderer, (Sint16)((600 - 6 * strlen(MiddlePage->buttons[i].text))/1.5),
+                   (Sint16)((MiddlePage->buttons[i].y1+ MiddlePage->buttons[i].y2)/3), MiddlePage->buttons[i].text, 0, 0, 0, 255);
         SDL_RenderSetScale(renderer , 1 ,1);
     }
 }
 
-void WriteAbouts (SDL_Renderer* renderer){
-    stringRGBA(renderer, 20 , 720 ,"Play 3v3: 3 Key     Play 2v2: 2 Key" , 0 , 0 ,0 ,255);
-    stringRGBA(renderer, 20 , 740 ,"Load Game: L        Save Game: S" , 0 , 0 ,0 ,255);
-    stringRGBA(renderer, 20 , 760 ,"Preference: P       About Game: F1" , 0 , 0 ,0 ,255);
-    stringRGBA(renderer, 20 , 780 ,"Quit: Q" , 0 , 0 ,0 ,255);
+void DrawAskPointPage (SDL_Renderer* renderer , NumberBox* numberbox){
+    SDL_RenderSetScale(renderer , 2,2);
+    stringRGBA(renderer, 80 , 60 ,"Enter the winning point of game: " , 0 , 0 ,0 ,255);
+    char point [3];
+    sprintf (point ,"%d" , numberbox->number);
+    roundedBoxRGBA(renderer, numberbox->x1 , numberbox->y1 , numberbox->x2 , numberbox->y2 , RoundOfNumberBox ,
+                    numberbox->Color.r , numberbox->Color.g , numberbox->Color.b , numberbox->Color.a);
+    stringRGBA(renderer, 355 , 60 ,point , 0 , 0 ,0 ,255);
+    SDL_RenderSetScale(renderer , 1,1);
+
 }
 
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window){

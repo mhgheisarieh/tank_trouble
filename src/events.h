@@ -4,8 +4,8 @@
 
 #include "struct.h"
 
-int handleEvents(Map* map);
+int handleEvents(Map* map , MiddlePage* MiddlePage) ;
+int handleEventsOfNumberBox (NumberBox* numberBox);
 void handleEventsOfFirstMenu (FirstPage* FirstPage);
-void DoAction (enum Actions Action);
 
 #endif //MAIN_C_EVENTS_H

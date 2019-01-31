@@ -45,28 +45,44 @@ typedef struct {
 typedef struct {
     int NumOfTanks;
     int x , y , NumOfWalls;
+    int WinPoint;
     Wall wall[MaxNumOfWalls];
     Tank tank [3];
     int DeathTime;
     bool IsAlive;
+    bool Enabled;
 } Map;
 
-enum Actions {Play3v3 , Play2v2 , load, save , setting , about ,quit , None};
+enum Actions {Play3v3 , Play2v2  , load, save , setting , about ,quit ,None , resume , Back };
 
 typedef struct {
-    int y , x1, x2;
+    int y1 , y2;
     char text [50];
-    SDL_Keycode ActionKey;
     enum Actions action;
     bool IsSelected;
 } Button;
 
 typedef struct {
-    Button buttons[NumOfButtons];
+    Button buttons[NumOfMainMenuButtons];
     int SelectedButtonNum;
     Color ButtonColor;
     Color SelectedColor;
     enum Actions  Action;
 }FirstPage;
+
+typedef struct {
+    Button buttons[NumOfMiddleMenuButtons];
+    int SelectedButtonNum;
+    Color ButtonColor;
+    Color SelectedColor;
+    Color BackgroundColor;
+    enum Actions Action;
+}MiddlePage;
+
+typedef struct {
+    int number;
+    Sint16 x1, x2 ,y1 ,y2;
+    Color Color;
+}NumberBox;
 
 #endif

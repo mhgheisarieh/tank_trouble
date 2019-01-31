@@ -12,8 +12,9 @@ void DrawBullet (SDL_Renderer* renderer, Bullet* bullet);
 void DrawBullets (SDL_Renderer* renderer, Map* map);
 void DrawWalls (SDL_Renderer* renderer, Wall* wall);
 void DrawScores (SDL_Renderer*, Map* map);
-void DrawButtons (SDL_Renderer* renderer, FirstPage* FirstPage);
-void WriteAbouts (SDL_Renderer* renderer);
+void DrawFirstPage (SDL_Renderer* renderer, FirstPage* FirstPage);
+void DrawAskPointPage (SDL_Renderer* renderer , NumberBox* numberbox);
+void DrawMiddlePage (SDL_Renderer* renderer , MiddlePage* MiddlePage);
 void Quit (SDL_Renderer* renderer ,  SDL_Window* window);
 
 #endif //MAIN_C_VIEW_H

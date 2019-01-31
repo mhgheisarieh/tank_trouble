@@ -3,7 +3,10 @@
 #define MAIN_C_CONSTANTS_H
 
 #define Exit 1000
-#define NumOfButtons 7
+#define ENDGAME 500
+#define ENTER 100
+#define NumOfMainMenuButtons 5
+#define NumOfMiddleMenuButtons 3
 #define Step 5
 #define NumOfBulls 5
 #define DegStep 0.15
@@ -14,6 +17,9 @@
 #define TankRadius 30
 #define PipeLength 31
 #define TimeOfBetweenGames 3000
-#define ButtonWide 80
+#define RoundOfButtons 10
+#define RoundOfNumberBox 2
+#define ButtonsX1 400
+#define ButtonsX2 800
 
 #endif //MAIN_C_CONSTANTS_H
