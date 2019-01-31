@@ -48,12 +48,8 @@ typedef struct {
     int WinPoint;
     Wall wall[MaxNumOfWalls];
     Tank tank [3];
-    Tank* WinnerTank;
-    int DeathTime;
-    int GameTime , StartRoundTime;
-    int frames;
-    bool IsAlive;
-    bool Enabled;
+    int WinnerTank , DeathTime ,GameTime , StartRoundTime , frames;
+    bool IsAlive , Enabled;
 } Map;
 
 enum Actions {Play3v3 , Play2v2  , load, save , setting , about ,quit ,None , resume , Back };

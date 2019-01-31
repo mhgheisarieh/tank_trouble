@@ -60,7 +60,7 @@ void CheckGame(Map* map){
             if (map->tank[i].Score == map->WinPoint){
                 IsEndedGame = 1;
                 map->Enabled = 0;
-                map->WinnerTank = &map->tank[i];
+                map->WinnerTank = i;
             }
         }
         if(!IsEndedGame)
