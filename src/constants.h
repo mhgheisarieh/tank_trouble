@@ -17,7 +17,7 @@
 #define TankRadius 30
 #define PipeLength 31
 #define TimeOfBetweenGames 2000
-#define TimeBetweenPowerUps 10 //sec
+#define TimeBetweenPowerUps 10
 #define TimeOfTankMined 20
 #define RoundOfButtons 10
 #define RoundOfNumberBox 2

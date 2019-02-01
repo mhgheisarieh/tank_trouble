@@ -26,6 +26,11 @@ void SaveGame (Map* map){
                                                map->tank[i].bullet[j].x ,     map->tank[i].bullet[j].y ,
                                                map->tank[i].bullet[j].CosDeg ,map->tank[i].bullet[j].SinDeg);
         }
+        fprintf(fp, "%d %d\n", map->tank[i].IsMined , map->tank[i].TimeOfMinned);
+        for (int j=0; j<10; j++){
+            fprintf(fp, "%d %d %d %d\n", map->tank[i].mine[j].x , map->tank[i].mine[j].y
+                    , map->tank[i].mine[j].Enabled , map->tank[i].mine[j].IsExplosed);
+        }
     }
     fprintf(fp , "%d %d %d %d %d\n" , map->IsAlive , map->WinnerTank, map->DeathTime, map->GameTime ,map->frames);
     fclose(fp);
@@ -65,6 +70,11 @@ void LoadGame (SDL_Renderer* renderer ,SDL_Window* window){
             fscanf(fp ,"%d %d %lf %lf %lf %lf\n", &map.tank[i].bullet[j].Exist , &map.tank[i].bullet[j].TimeAppear ,
                     &map.tank[i].bullet[j].x ,    &map.tank[i].bullet[j].y ,
                     &map.tank[i].bullet[j].CosDeg ,&map.tank[i].bullet[j].SinDeg);
+        }
+        fscanf(fp, "%d %d\n", (int *)&map.tank[i].IsMined , &map.tank[i].TimeOfMinned);
+        for (int j=0; j<10; j++){
+            fscanf(fp, "%d %d %d %d\n", &map.tank[i].mine[j].x , &map.tank[i].mine[j].y
+                    , (int *)&map.tank[i].mine[j].Enabled , (int *)&map.tank[i].mine[j].IsExplosed);
         }
     }
     fscanf(fp , "%d %d %d %d %d\n" , (int *)&map.IsAlive , &map.WinnerTank, &map.DeathTime, &map.GameTime ,&map.frames);

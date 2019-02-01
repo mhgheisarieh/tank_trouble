@@ -34,7 +34,7 @@ typedef struct {
 }PowerUP;
 
 typedef struct {
-    int x ,y , r;
+    int x ,y ;
     bool Enabled , IsExplosed ;
     int TimeOfMining ,ExploseTime;
 }Mine;

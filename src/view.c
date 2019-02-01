@@ -132,7 +132,9 @@ void DrawMines (SDL_Renderer* renderer,Map* map){
                 filledCircleRGBA(renderer,map->tank[i].mine[j].x ,map->tank[i].mine[j].y , 5 ,0, 0,0, 255);
                 filledCircleRGBA(renderer,map->tank[i].mine[j].x ,map->tank[i].mine[j].y , 50 ,255, 153, 255, 150);
             }
-
+            if (map->tank[i].mine[j].IsExplosed && map->frames - map->tank[i].mine[j].ExploseTime > 2 * Second){
+                map->tank[i].mine[j].IsExplosed = 0;
+            }
         }
     }
 }
