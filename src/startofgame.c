@@ -14,6 +14,7 @@
 #include "managment.h"
 #include "startofgame.h"
 #include "Menus.h"
+#include "save.h"
 
 void StartGame (int NumOfTank , SDL_Renderer* renderer ,  SDL_Window* window){
     Map map;
@@ -26,12 +27,16 @@ void StartGame (int NumOfTank , SDL_Renderer* renderer ,  SDL_Window* window){
         map.tank[i].Score = 0;
     }
     NewRound (&map);
+    ManageRound(&map , renderer , window);
+}
+
+void ManageRound (Map* map , SDL_Renderer* renderer ,  SDL_Window* window ){
     MiddlePage MiddlePage;
     DefinitionOfMiddleMenu(&MiddlePage);
     int Status;
     while (1) {
         int start_ticks = SDL_GetTicks();
-        Status = handleEvents(&map, &MiddlePage);
+        Status = handleEvents(map, &MiddlePage);
         if (Status == Exit) {
             Quit(renderer, window);
             break;
@@ -41,18 +46,19 @@ void StartGame (int NumOfTank , SDL_Renderer* renderer ,  SDL_Window* window){
         }
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
-        map.GameTime = (map.frames - 1) * 20;
-        DrawMap(renderer , &map);
-        if (map.Enabled){
-            map.frames ++;
-            Logics(&map);
-            Physics(&map);
-            CheckGame(&map);
+        map->GameTime = (map->frames - 1) * 20;
+        DrawMap(renderer , map);
+        if (map->Enabled){
+            map->frames ++;
+            //printf("%d %d" , map->GameTime , map->frames);
+            Logics(map);
+            Physics(map);
+            CheckGame(map);
         } else {
-            if (map.WinnerTank == -1)
+            if (map->WinnerTank == -1)
                 DrawMiddlePage (renderer , &MiddlePage);
             else {
-                DrawWinPage (renderer, &map);
+                DrawWinPage (renderer, map);
             }
         }
         SDL_RenderPresent(renderer);
@@ -119,6 +125,9 @@ void ManageFirstPage (FirstPage* FirstPage , SDL_Renderer* renderer, SDL_Window*
             break;
         case Play3v3:
             StartGame(3 ,renderer , window);
+            break;
+        case load:
+            LoadGame(renderer , window);
             break;
         case quit:
             Quit(renderer, window);

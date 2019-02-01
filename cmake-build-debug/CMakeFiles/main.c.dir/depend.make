@@ -415,8 +415,10 @@ CMakeFiles/main.c.dir/src/physics.c.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/main.c.dir/src/physics.c.o: /usr/include/SDL2/close_code.h
 
 CMakeFiles/main.c.dir/src/save.c.o: ../src/constants.h
+CMakeFiles/main.c.dir/src/save.c.o: ../src/newround.h
 CMakeFiles/main.c.dir/src/save.c.o: ../src/save.c
 CMakeFiles/main.c.dir/src/save.c.o: ../src/save.h
+CMakeFiles/main.c.dir/src/save.c.o: ../src/startofgame.h
 CMakeFiles/main.c.dir/src/save.c.o: ../src/struct.h
 CMakeFiles/main.c.dir/src/save.c.o: /usr/include/SDL2/SDL.h
 CMakeFiles/main.c.dir/src/save.c.o: /usr/include/SDL2/SDL2_gfxPrimitives.h
@@ -472,6 +474,7 @@ CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/managment.h
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/maps.h
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/newround.h
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/physics.h
+CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/save.h
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/startofgame.c
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/startofgame.h
 CMakeFiles/main.c.dir/src/startofgame.c.o: ../src/struct.h

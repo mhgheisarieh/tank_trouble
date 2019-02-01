@@ -416,8 +416,10 @@ CMakeFiles/main.c.dir/src/physics.c.o
  /usr/include/SDL2/close_code.h
 CMakeFiles/main.c.dir/src/save.c.o
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
+ /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.c
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.h
+ /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.h
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL2_gfxPrimitives.h
@@ -473,6 +475,7 @@ CMakeFiles/main.c.dir/src/startofgame.c.o
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+ /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.h
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.c
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.h
  /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h

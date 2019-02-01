@@ -15,9 +15,9 @@ typedef struct {
 } Color;
 
 typedef struct {
-    int Exist;
+    int Exist , TimeAppear ;
     double x, y, r;
-    double TimeAppear , CosDeg , SinDeg;
+    double CosDeg , SinDeg;
 } Bullet;
 
 typedef struct {
@@ -28,8 +28,7 @@ typedef struct {
 } Wall;
 
 typedef struct {
-    double x ,y , radius;
-    double deg;
+    double x ,y , radius ,deg;
     SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
     keyboard Key;
     bool CanXPlus ,CanYPlus , CanXMinus , CanYMinus;
@@ -48,7 +47,7 @@ typedef struct {
     int WinPoint;
     Wall wall[MaxNumOfWalls];
     Tank tank [3];
-    int WinnerTank , DeathTime ,GameTime , StartRoundTime , frames;
+    int WinnerTank , DeathTime ,GameTime , frames;
     bool IsAlive , Enabled;
 } Map;
 
@@ -58,7 +57,6 @@ typedef struct {
     int y1 , y2;
     char text [50];
     enum Actions action;
-    bool IsSelected;
 } Button;
 
 typedef struct {
@@ -83,5 +81,12 @@ typedef struct {
     Sint16 x1, x2 ,y1 ,y2;
     Color Color;
 }NumberBox;
+
+enum PowerUpType {FragBomb , Mine , Laser};
+
+typedef struct {
+    int x ,y;
+    enum PowerUpType PowerUpType;
+}PowerUp;
 
 #endif

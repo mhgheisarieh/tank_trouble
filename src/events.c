@@ -82,10 +82,13 @@ int handleEvents(Map* map , MiddlePage* MiddlePage ) {
                     case Back:
                         return ENDGAME;
                     case save:
-                        //SaveGame (map);
+                        MiddlePage->SelectedButtonNum = 0;
+                        map->Enabled = 1;
+                        MiddlePage->Action =None;
+                        SaveGame (map);
                         break;
                 }
-            } else if (event.type == SDL_KEYUP && map->WinnerTank != NULL && event.key.keysym.sym == SDLK_RETURN) {
+            } else if (event.type == SDL_KEYUP && map->WinnerTank != -1 && event.key.keysym.sym == SDLK_RETURN) {
                 return ENDGAME;
             }
         }
@@ -109,7 +112,6 @@ void handleEventsOfFirstMenu (FirstPage* FirstPage){
                     break;
                 case SDLK_RETURN:
                     if (FirstPage->buttons[FirstPage->SelectedButtonNum].action == about ||
-                        FirstPage->buttons[FirstPage->SelectedButtonNum].action == load  ||
                         FirstPage->buttons[FirstPage->SelectedButtonNum].action == setting)
                         break;
                     FirstPage->Action = FirstPage->buttons[FirstPage->SelectedButtonNum].action;
@@ -127,7 +129,7 @@ void handleEventsOfFirstMenu (FirstPage* FirstPage){
                     FirstPage->Action = quit;
                     break;
                 case SDLK_l:
-                    //FirstPage->Action = load;
+                    FirstPage->Action = load;
                     break;
                 case SDLK_p:
                     //FirstPage->Action = setting;

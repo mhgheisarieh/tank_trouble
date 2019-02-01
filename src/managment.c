@@ -34,6 +34,7 @@ void CheckBullets (Map* map){
                                         + (map->tank[i].y - map->tank[j].bullet[k].y) * (map->tank[i].y - map->tank[j].bullet[k].y));
                 if (distance <= TankRadius && map->tank[i].IsAlive &&  map->tank[j].bullet[k].Exist) {
                     LossOfTank(&map->tank[i] , &map->tank[j].bullet[k]);
+                    map->tank[i].NumOFExitBulls --;
                 }
             }
         }
@@ -48,7 +49,7 @@ void CheckGame(Map* map){
     }
     if (map->IsAlive && NumOfAliveTanks == 1){
         map->IsAlive = 0;
-        map->DeathTime = SDL_GetTicks()-map->StartRoundTime;
+        map->DeathTime = map->GameTime;
     }
     if (map->GameTime - map->DeathTime > TimeOfBetweenGames && !map->IsAlive){
         for (int i=0; i<map->NumOfTanks; i++){
