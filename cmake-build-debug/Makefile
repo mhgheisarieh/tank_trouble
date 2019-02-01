@@ -150,6 +150,33 @@ src/Menus.c.s:
 	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/Menus.c.s
 .PHONY : src/Menus.c.s
 
+src/PowerUp.o: src/PowerUp.c.o
+
+.PHONY : src/PowerUp.o
+
+# target to build an object file
+src/PowerUp.c.o:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/PowerUp.c.o
+.PHONY : src/PowerUp.c.o
+
+src/PowerUp.i: src/PowerUp.c.i
+
+.PHONY : src/PowerUp.i
+
+# target to preprocess a source file
+src/PowerUp.c.i:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/PowerUp.c.i
+.PHONY : src/PowerUp.c.i
+
+src/PowerUp.s: src/PowerUp.c.s
+
+.PHONY : src/PowerUp.s
+
+# target to generate assembly for a file
+src/PowerUp.c.s:
+	$(MAKE) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/src/PowerUp.c.s
+.PHONY : src/PowerUp.c.s
+
 src/events.o: src/events.c.o
 
 .PHONY : src/events.o
@@ -432,6 +459,9 @@ help:
 	@echo "... src/Menus.o"
 	@echo "... src/Menus.i"
 	@echo "... src/Menus.s"
+	@echo "... src/PowerUp.o"
+	@echo "... src/PowerUp.i"
+	@echo "... src/PowerUp.s"
 	@echo "... src/events.o"
 	@echo "... src/events.i"
 	@echo "... src/events.s"

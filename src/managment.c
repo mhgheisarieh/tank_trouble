@@ -12,19 +12,11 @@
 void LossOfTank (Tank* tank , Bullet* bullet){
     bullet->Exist = 0;
     tank->IsAlive = 0;
-    tank->NumOFExitBulls --;
-//    tank->PipeColor.r = 255;
-//    tank->PipeColor.g = 255;
-//    tank->PipeColor.b = 255;
-//    tank->PipeColor.a = 255;
-//    tank->BodyColor.r = 255;
-//    tank->BodyColor.g = 255;
-//    tank->BodyColor.b = 255;
-//    tank->BodyColor.a = 255;
-//    tank->InnerColor.r = 255;
-//    tank->InnerColor.g = 255;
-//    tank->InnerColor.b = 255;
-//    tank->InnerColor.a = 255;
+}
+
+void LossOfTankWithMine (Tank* tank , Mine* mine){
+    mine->Enabled = 0;
+    tank->IsAlive = 0;
 }
 
 void FadeTank (Tank* tank ){
@@ -45,6 +37,24 @@ void CheckBullets (Map* map){
                                         + (map->tank[i].y - map->tank[j].bullet[k].y) * (map->tank[i].y - map->tank[j].bullet[k].y));
                 if (distance <= TankRadius && map->tank[i].IsAlive &&  map->tank[j].bullet[k].Exist) {
                     LossOfTank(&map->tank[i] , &map->tank[j].bullet[k]);
+                    map->tank[j].NumOFExitBulls --;
+                }
+            }
+        }
+    }
+}
+
+void CheckMines (Map* map){
+    for (int i=0; i<map->NumOfTanks ; i++){
+        for (int j=0; j<map->NumOfTanks ; j++){
+            for (int k=0; k<10; k++){
+                double distance = sqrt ((map->tank[i].x - map->tank[j].mine[k].x) * (map->tank[i].x - map->tank[j].mine[k].x)
+                                        + (map->tank[i].y - map->tank[j].mine[k].y) * (map->tank[i].y - map->tank[j].mine[k].y));
+                if (distance <= TankRadius * 2 && map->tank[i].IsAlive &&
+                map->tank[j].mine[k].Enabled && map->frames - map->tank[j].mine[k].TimeOfMining > 2 * Second) {
+                    LossOfTankWithMine(&map->tank[i] , &map->tank[j].mine[k]);
+                    map->tank[j].mine[k].ExploseTime = map->frames;
+                    map->tank[j].mine[k].IsExplosed = 1;
                 }
             }
         }
@@ -53,6 +63,7 @@ void CheckBullets (Map* map){
 
 void CheckGame(Map* map){
     CheckBullets(map);
+    CheckMines (map);
     int NumOfAliveTanks = 0;
     for (int i=0; i<map->NumOfTanks; i++){
         if (map->tank[i].IsAlive) NumOfAliveTanks++;

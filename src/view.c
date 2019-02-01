@@ -14,6 +14,8 @@ void DrawMap (SDL_Renderer* renderer ,Map* map){
     DrawBullets (renderer, map);
     DrawWalls (renderer, map->wall);
     DrawScores (renderer, map);
+    DrawPowerUps (renderer, map);
+    DrawMines (renderer, map);
 }
 
 void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
@@ -28,7 +30,8 @@ void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
                      (Uint8)(tank)->InnerColor.g,
                      (Uint8)(tank)->InnerColor.b,
                      (Uint8)(tank)->InnerColor.a);
-    thickLineRGBA(renderer,(Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg)) / 1.8),
+    if (!tank->IsMined){
+        thickLineRGBA(renderer,(Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg)) / 1.8),
                   (Sint16)((tank)->y + (PipeLength * sinf((float)(tank)->deg)) / 1.8),
                   (Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg))),
                   (Sint16)((tank)->y +(PipeLength * sinf((float)(tank)->deg))),
@@ -36,7 +39,18 @@ void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
                   (Uint8)(tank)->PipeColor.r,
                   (Uint8)(tank)->PipeColor.g,
                   (Uint8)(tank)->PipeColor.b,
-                  (Uint8)(tank)->PipeColor.a);
+                  (Uint8)(tank)->PipeColor.a);}
+    else {
+        thickLineRGBA(renderer,(Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg)) / 1.8),
+                      (Sint16)((tank)->y + (PipeLength * sinf((float)(tank)->deg)) / 1.8),
+                      (Sint16)((tank)->x + (PipeLength * cosf((float)(tank)->deg))),
+                      (Sint16)((tank)->y +(PipeLength * sinf((float)(tank)->deg))),
+                      (Uint8)((tank)->radius / 4),
+                      (Uint8)(tank)->PipeColor.r,
+                      (Uint8)(tank)->PipeColor.g,
+                      (Uint8)(tank)->PipeColor.b,
+                      (Uint8)((tank)->PipeColor.a / 4));
+    }
 }
 
 void DrawTanks (SDL_Renderer* renderer , Map* map) {
@@ -98,6 +112,28 @@ void DrawScores (SDL_Renderer* renderer, Map* map){
         SDL_RenderSetScale(renderer , 2 ,2);
         stringRGBA(renderer , (Sint16)((1100 - n * 8)/2)  , (Sint16) ((y + 70)/2) ,  ScoreString , 0 , 0 , 0 ,255);
         SDL_RenderSetScale(renderer , 1,1);
+    }
+}
+
+void DrawPowerUps (SDL_Renderer* renderer,Map* map){
+    for (int i=0; i<3; i++){
+        if (map->powerUP[i].enabled){
+            filledCircleRGBA(renderer, map->powerUP[i].x , map->powerUP[i].y , 15 ,rand() % 255, rand() % 255, rand() % 255, 255);
+        }
+    }
+}
+
+void DrawMines (SDL_Renderer* renderer,Map* map){
+    for (int i=0; i<map->NumOfTanks; i++){
+        for (int j=0 ;j<10; j++){
+            if (map->tank[i].mine[j].Enabled && map->frames - map->tank[i].mine[j].TimeOfMining <  2 * Second)
+                filledCircleRGBA(renderer,map->tank[i].mine[j].x ,map->tank[i].mine[j].y , 5 ,0, 0,0, 255);
+            if (map->tank[i].mine[j].IsExplosed && map->frames - map->tank[i].mine[j].ExploseTime < 2 * Second){
+                filledCircleRGBA(renderer,map->tank[i].mine[j].x ,map->tank[i].mine[j].y , 5 ,0, 0,0, 255);
+                filledCircleRGBA(renderer,map->tank[i].mine[j].x ,map->tank[i].mine[j].y , 50 ,255, 153, 255, 150);
+            }
+
+        }
     }
 }
 

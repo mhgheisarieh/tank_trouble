@@ -6,6 +6,8 @@
 void moveTank(Tank* tank);
 void turnTank(Tank* tank);
 void fire(Tank* tank , int GameTime);
+void Minnig (Tank* tank , int GameTime);
+void IsMined (Map* map, Tank* tank);
 void move_bullet(Bullet* bullet , Map* map);
 int IsPlus(double i);
 void TMPMoveBullet (Bullet* bullet);

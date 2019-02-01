@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.c.dir/src/Menus.c.o"
+  "CMakeFiles/main.c.dir/src/PowerUp.c.o"
   "CMakeFiles/main.c.dir/src/events.c.o"
   "CMakeFiles/main.c.dir/src/logic.c.o"
   "CMakeFiles/main.c.dir/src/main.c.o"

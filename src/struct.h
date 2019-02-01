@@ -28,6 +28,18 @@ typedef struct {
 } Wall;
 
 typedef struct {
+    int x, y;
+    Color color;
+    bool enabled;
+}PowerUP;
+
+typedef struct {
+    int x ,y , r;
+    bool Enabled , IsExplosed ;
+    int TimeOfMining ,ExploseTime;
+}Mine;
+
+typedef struct {
     double x ,y , radius ,deg;
     SDL_Keycode Up_key , Down_key , Right_Key , Left_Key ,Shoot_Key ;
     keyboard Key;
@@ -36,8 +48,9 @@ typedef struct {
     Color InnerColor , ConstInnerColor;
     Color PipeColor , ConstPipeColor;
     Bullet bullet[NumOfBulls];
-    int NumOFExitBulls , Score ;
-    bool canshoot , IsAlive ,FullDied;
+    int NumOFExitBulls , Score , TimeOfMinned;
+    bool canshoot , IsAlive ,FullDied , IsMined;
+    Mine mine[10];
 } Tank;
 
 typedef struct {
@@ -48,6 +61,7 @@ typedef struct {
     Tank tank [3];
     int WinnerTank , DeathTime ,GameTime , frames;
     bool IsAlive , Enabled;
+    PowerUP powerUP[3];
 } Map;
 
 enum Actions {Play3v3 , Play2v2  , load, save ,setting , about ,quit ,None , resume , Back };
@@ -80,12 +94,5 @@ typedef struct {
     Sint16 x1, x2 ,y1 ,y2;
     Color Color;
 }NumberBox;
-
-enum PowerUpType {FragBomb , Mine , Laser , NoPowerUp};
-
-typedef struct {
-    int x ,y;
-    enum PowerUpType PowerUpType;
-}PowerUp;
 
 #endif

@@ -15,6 +15,7 @@
 #include "startofgame.h"
 #include "Menus.h"
 #include "save.h"
+#include "PowerUp.h"
 
 void StartGame (int NumOfTank , SDL_Renderer* renderer ,  SDL_Window* window){
     Map map;
@@ -50,10 +51,11 @@ void ManageRound (Map* map , SDL_Renderer* renderer ,  SDL_Window* window ){
         DrawMap(renderer , map);
         if (map->Enabled){
             map->frames ++;
-            //printf("%d %d\n" , map->GameTime , map->frames);
             Logics(map);
             Physics(map);
             CheckGame(map);
+            if (map->frames % (TimeBetweenPowerUps*Second) == 0)
+                MakePowerUp (map);
         } else {
             if (map->WinnerTank == -1)
                 DrawMiddlePage (renderer , &MiddlePage);

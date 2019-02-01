@@ -11,6 +11,7 @@ void Physics (Map* map){
     for (int i=0 ; i<map->NumOfTanks; i++){
         moveTank(&map->tank[i]);
         turnTank(&map->tank[i]);
+        IsMined (map , &map->tank[i]);
         for (int j=0; j<NumOfBulls; j++)
             if (map->tank[i].bullet[j].Exist)
                 move_bullet(&map->tank[i].bullet[j] , map);
@@ -20,6 +21,20 @@ void Physics (Map* map){
 int IsPlus(double i){
     if (i>=0) return 1;
     return 0;
+}
+
+void IsMined (Map* map, Tank* tank){
+    if (map->frames - tank->TimeOfMinned > TimeOfTankMined * Second) tank->IsMined =0;
+    if (tank->IsMined) return;
+    for (int i=0; i<3; i++){
+        double distance = sqrt ((tank->x - map->powerUP[i].x) * (tank->x - map->powerUP[i].x)
+                                + (tank->y - map->powerUP[i].y) * (tank->y - map->powerUP[i].y));
+        if (distance < 45){
+            map->powerUP[i].enabled = 0;
+            tank->IsMined = 1;
+            tank->TimeOfMinned = map->frames;
+        }
+    }
 }
 
 void moveTank(Tank* tank) {
@@ -70,6 +85,10 @@ void turnTank(Tank* tank){
 void fire(Tank* tank , int GameTime){
     if (!tank->IsAlive) return;
     if (tank->NumOFExitBulls == NumOfBulls) return;
+    if (tank->IsMined) {
+        Minnig (tank , GameTime);
+        return;
+    }
     int i;
     for (i=0; i<NumOfBulls; i++)
         if (tank->bullet[i].Exist==0)
@@ -81,6 +100,20 @@ void fire(Tank* tank , int GameTime){
     tank->bullet[i].y = tank->y + PipeLength*(sinf((float)tank->deg))*0.9;
     tank->bullet[i].TimeAppear = GameTime;
     tank->NumOFExitBulls ++;
+}
+
+void Minnig (Tank* tank , int GameTime){
+    int i;
+    for (i=0; i<10; i++){
+        if (tank->mine[i].Enabled==0){
+            tank->mine[i].Enabled =1;
+            break;
+        }
+        if (i==9) return;
+    }
+    tank->mine[i].x = (int)tank->x;
+    tank->mine[i].y = (int)tank->y;
+    tank->mine[i].TimeOfMining = GameTime/20 +1;
 }
 
 void move_bullet(Bullet* bullet , Map* map){
