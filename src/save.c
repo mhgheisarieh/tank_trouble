@@ -11,9 +11,22 @@
 #include "startofgame.h"
 #include "newround.h"
 
+//int NumOfSaves (){
+//    int a =1;
+//    char address[40];
+//    do{
+//        sprintf(address , "../Saves/%d.txt", a);
+//        a++;
+//    }while ( access( address, F_OK ) != -1 );
+//    return a;
+//}
+
 void SaveGame (Map* map){
+//    int a = NumOfSaves ();
+    char address[40];
+    //sprintf(address , "../Saves/%d.txt", a);
+    sprintf(address , "../Saves/1.txt");
     FILE* fp;
-    char address [20] = "../Saves/1.txt";
     fp = fopen(address, "w");
     fprintf(fp , "%d %d %d\n" , map->NumOfTanks  , map->NumOfWalls , map->WinPoint);
     for (int i=0; i<map->NumOfWalls; i++)
