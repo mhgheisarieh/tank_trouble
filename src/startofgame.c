@@ -50,7 +50,7 @@ void ManageRound (Map* map , SDL_Renderer* renderer ,  SDL_Window* window ){
         DrawMap(renderer , map);
         if (map->Enabled){
             map->frames ++;
-            //printf("%d %d" , map->GameTime , map->frames);
+            //printf("%d %d\n" , map->GameTime , map->frames);
             Logics(map);
             Physics(map);
             CheckGame(map);

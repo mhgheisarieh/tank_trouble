@@ -36,9 +36,8 @@ typedef struct {
     Color InnerColor , ConstInnerColor;
     Color PipeColor , ConstPipeColor;
     Bullet bullet[NumOfBulls];
-    int NumOFExitBulls , Score;
-    int TimeOfLoss;
-    bool canshoot , IsAlive;
+    int NumOFExitBulls , Score ;
+    bool canshoot , IsAlive ,FullDied;
 } Tank;
 
 typedef struct {
@@ -51,7 +50,7 @@ typedef struct {
     bool IsAlive , Enabled;
 } Map;
 
-enum Actions {Play3v3 , Play2v2  , load, save , setting , about ,quit ,None , resume , Back };
+enum Actions {Play3v3 , Play2v2  , load, save ,setting , about ,quit ,None , resume , Back };
 
 typedef struct {
     int y1 , y2;
@@ -82,7 +81,7 @@ typedef struct {
     Color Color;
 }NumberBox;
 
-enum PowerUpType {FragBomb , Mine , Laser};
+enum PowerUpType {FragBomb , Mine , Laser , NoPowerUp};
 
 typedef struct {
     int x ,y;

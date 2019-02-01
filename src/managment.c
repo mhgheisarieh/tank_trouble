@@ -12,18 +12,29 @@
 void LossOfTank (Tank* tank , Bullet* bullet){
     bullet->Exist = 0;
     tank->IsAlive = 0;
-    tank->PipeColor.r = 255;
-    tank->PipeColor.g = 255;
-    tank->PipeColor.b = 255;
-    tank->PipeColor.a = 255;
-    tank->BodyColor.r = 255;
-    tank->BodyColor.g = 255;
-    tank->BodyColor.b = 255;
-    tank->BodyColor.a = 255;
-    tank->InnerColor.r = 255;
-    tank->InnerColor.g = 255;
-    tank->InnerColor.b = 255;
-    tank->InnerColor.a = 255;
+    tank->NumOFExitBulls --;
+//    tank->PipeColor.r = 255;
+//    tank->PipeColor.g = 255;
+//    tank->PipeColor.b = 255;
+//    tank->PipeColor.a = 255;
+//    tank->BodyColor.r = 255;
+//    tank->BodyColor.g = 255;
+//    tank->BodyColor.b = 255;
+//    tank->BodyColor.a = 255;
+//    tank->InnerColor.r = 255;
+//    tank->InnerColor.g = 255;
+//    tank->InnerColor.b = 255;
+//    tank->InnerColor.a = 255;
+}
+
+void FadeTank (Tank* tank ){
+    if (tank->BodyColor.a <= 5 && tank->InnerColor.a<= 5 && tank->PipeColor.a<= 5){
+        tank->FullDied =1;
+        return;
+    }
+    tank->BodyColor.a -=3;
+    tank->InnerColor.a -=3;
+    tank->PipeColor.a -=3;
 }
 
 void CheckBullets (Map* map){
@@ -34,7 +45,6 @@ void CheckBullets (Map* map){
                                         + (map->tank[i].y - map->tank[j].bullet[k].y) * (map->tank[i].y - map->tank[j].bullet[k].y));
                 if (distance <= TankRadius && map->tank[i].IsAlive &&  map->tank[j].bullet[k].Exist) {
                     LossOfTank(&map->tank[i] , &map->tank[j].bullet[k]);
-                    map->tank[i].NumOFExitBulls --;
                 }
             }
         }
@@ -46,6 +56,7 @@ void CheckGame(Map* map){
     int NumOfAliveTanks = 0;
     for (int i=0; i<map->NumOfTanks; i++){
         if (map->tank[i].IsAlive) NumOfAliveTanks++;
+        if (!map->tank[i].IsAlive && map->Enabled) FadeTank (&map->tank[i]);
     }
     if (map->IsAlive && NumOfAliveTanks == 1){
         map->IsAlive = 0;

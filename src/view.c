@@ -17,6 +17,7 @@ void DrawMap (SDL_Renderer* renderer ,Map* map){
 }
 
 void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
+    if (tank->FullDied) return;
     filledCircleRGBA(renderer, (Sint16)(tank)->x,(Sint16)(tank)->y,(Sint16) (tank)->radius,
                      (Uint8)(tank)->BodyColor.r,
                      (Uint8)(tank)->BodyColor.g,
@@ -40,11 +41,11 @@ void DrawTank  (SDL_Renderer* renderer , Tank* tank) {
 
 void DrawTanks (SDL_Renderer* renderer , Map* map) {
     for (int i = 0; i < map->NumOfTanks; i++) {
-        if (map->tank[i].IsAlive) continue;
+        if (map->tank[i].IsAlive || map->tank[i].FullDied) continue;
             DrawTank(renderer , &map->tank[i]);
     }
     for (int i = 0; i < map->NumOfTanks; i++) {
-        if (!map->tank[i].IsAlive) continue;
+        if (!map->tank[i].IsAlive || map->tank[i].FullDied) continue;
         DrawTank(renderer , &map->tank[i]);
     }
 }
@@ -176,7 +177,7 @@ void DrawAskPointPage (SDL_Renderer* renderer , NumberBox* numberbox){
 void DrawWinPage (SDL_Renderer* renderer, Map* map){
     char string [30];
     if (map->NumOfTanks == 2)
-        roundedBoxRGBA(renderer,  300 , 250, 900, 600 , 20 , 240, 215, 190 , 200);
+        roundedBoxRGBA(renderer,  300 , 250, 900, 625 , 20 , 240, 215, 190 , 200);
     if (map->NumOfTanks == 3){
         roundedBoxRGBA(renderer,  300 , 250, 900, 775 , 20 , 240, 215, 190 , 200);
         roundedBoxRGBA(renderer,  325 , 650, 875, 750 , 20 , 25 , 230, 100 , 200);

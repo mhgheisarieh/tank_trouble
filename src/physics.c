@@ -23,6 +23,7 @@ int IsPlus(double i){
 }
 
 void moveTank(Tank* tank) {
+    if (!tank->IsAlive) return;
     if (tank->Key.Up_key && tank->Key.Down_key) return;
     if (tank->Key.Up_key){
         if (IsPlus(sin(tank->deg))){
@@ -59,6 +60,7 @@ void moveTank(Tank* tank) {
 }
 
 void turnTank(Tank* tank){
+    if (!tank->IsAlive) return;
     if (tank->Key.Right_Key)
         tank->deg += DegStep;
     if (tank->Key.Left_Key)

@@ -6,117 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Menus.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
 
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/events.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/managment.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-time.h
--
-newround.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h
-logic.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
-maps.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h
 struct.h
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
 struct.h
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-unistd.h
--
-SDL.h
--
-SDL2_gfxPrimitives.h
--
-save.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-startofgame.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.h
-newround.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.h
-struct.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.c
-stdio.h
--
-stdbool.h
--
-stdlib.h
--
-math.h
--
-SDL.h
--
-SDL2_gfxPrimitives.h
--
-view.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
-newround.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/newround.h
-maps.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/maps.h
-physics.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
-logic.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
-events.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/events.h
-managment.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/managment.h
-startofgame.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.h
-Menus.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/Menus.h
-save.h
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/save.h
-
-/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/startofgame.h
 
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/struct.h
 SDL.h
@@ -127,6 +25,28 @@ stdbool.h
 -
 constants.h
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/constants.h
+
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.c
+stdio.h
+-
+stdbool.h
+-
+math.h
+-
+stdlib.h
+-
+string.h
+-
+SDL.h
+-
+SDL2_gfxPrimitives.h
+-
+view.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
+physics.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/physics.h
+logic.h
+/media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/logic.h
 
 /media/gheisarieh/E860844D60842502/Sharif University - Computer Engineering/Term 1/Programming Basics/project/src/view.h
 struct.h

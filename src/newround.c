@@ -59,8 +59,8 @@ void Definition(Map* map){
     map->tank[0].CanYPlus = 1;
     map->tank[0].CanXMinus = 1;
     map->tank[0].CanYMinus = 1;
-    map->tank[0].TimeOfLoss = SDL_GetTicks();
     map->tank[0].IsAlive = 1;
+    map->tank[0].FullDied = 0;
     map->tank[0].NumOFExitBulls = 0;
     map->tank[0].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[0].bullet[i].Exist = 0;}
@@ -105,8 +105,8 @@ void Definition(Map* map){
     map->tank[1].CanXMinus = 1;
     map->tank[1].CanYMinus = 1;
     map->tank[1].NumOFExitBulls = 0;
-    map->tank[1].TimeOfLoss = SDL_GetTicks();
     map->tank[1].IsAlive = 1;
+    map->tank[1].FullDied = 0;
     map->tank[1].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[1].bullet[i].Exist = 0;}
 
@@ -152,8 +152,8 @@ void Definition(Map* map){
     map->tank[2].CanXMinus = 1;
     map->tank[2].CanYMinus = 1;
     map->tank[2].NumOFExitBulls = 0;
-    map->tank[2].TimeOfLoss = SDL_GetTicks();
     map->tank[2].IsAlive = 1;
+    map->tank[2].FullDied = 0;
     map->tank[2].canshoot =1;
     for (int i=0; i<NumOfBulls; i++){map->tank[2].bullet[i].Exist = 0;}
 }

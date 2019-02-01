@@ -20,7 +20,7 @@ void SaveGame (Map* map){
         fprintf(fp ,"%d %d %d %d\n" , map->wall[i].x1, map->wall[i].y1, map->wall[i].x2, map->wall[i].y2);
     for (int i=0; i<map->NumOfTanks; i++) {
         fprintf(fp, "%lf %lf %lf\n", map->tank[i].x, map->tank[i].y, map->tank[i].deg);
-        fprintf(fp, "%d %d %d %d\n", map->tank[i].NumOFExitBulls , map->tank[i].Score , map->tank[i].TimeOfLoss , map->tank[i].IsAlive);
+        fprintf(fp, "%d %d %d\n", map->tank[i].NumOFExitBulls , map->tank[i].Score , map->tank[i].IsAlive);
         for (int j=0; j<NumOfBulls; j++) {
             fprintf(fp ,"%d %d %lf %lf %lf %lf\n", map->tank[i].bullet[j].Exist , map->tank[i].bullet[j].TimeAppear ,
                                                map->tank[i].bullet[j].x ,     map->tank[i].bullet[j].y ,
@@ -60,14 +60,14 @@ void LoadGame (SDL_Renderer* renderer ,SDL_Window* window){
     }
     for (int i=0; i<map.NumOfTanks; i++) {
         fscanf(fp, "%lf %lf %lf\n", &map.tank[i].x, &map.tank[i].y, &map.tank[i].deg);
-        fscanf(fp, "%d %d %d %d\n", &map.tank[i].NumOFExitBulls , &map.tank[i].Score , &map.tank[i].TimeOfLoss , &map.tank[i].IsAlive);
+        fscanf(fp, "%d %d %d\n", &map.tank[i].NumOFExitBulls , &map.tank[i].Score , (int *)&map.tank[i].IsAlive);
         for (int j=0; j<NumOfBulls; j++) {
             fscanf(fp ,"%d %d %lf %lf %lf %lf\n", &map.tank[i].bullet[j].Exist , &map.tank[i].bullet[j].TimeAppear ,
                     &map.tank[i].bullet[j].x ,    &map.tank[i].bullet[j].y ,
                     &map.tank[i].bullet[j].CosDeg ,&map.tank[i].bullet[j].SinDeg);
         }
     }
-    fscanf(fp , "%d %d %d %d %d\n" , &map.IsAlive , &map.WinnerTank, &map.DeathTime, &map.GameTime ,&map.frames);
+    fscanf(fp , "%d %d %d %d %d\n" , (int *)&map.IsAlive , &map.WinnerTank, &map.DeathTime, &map.GameTime ,&map.frames);
     fclose(fp);
     map.Enabled = 1;
     ManageRound(&map , renderer, window);
